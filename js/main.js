@@ -11,3 +11,11 @@ $('.nav__list-item').on('vclick', function(e) {
 $('header').on('swipeleft', function() {
   console.log('hello');
 });
+
+$('.nav__toggle').on('vclick', function(e) {
+  $('.nav').toggle();
+});
+
+$('.nav__list-item').on('vclick', function(e) {
+  $('.nav').toggle();
+});

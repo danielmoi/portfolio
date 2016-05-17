@@ -194,10 +194,13 @@ input[type=submit] {
   width: 100%;
   z-index: 1;
   background: #323232;
-  padding: 0;
-  border-top: 1px solid #00a5cd; }
+  padding: 0 0 80px 0;
+  border-top: 1px solid #00a5cd;
+  bottom: 0;
+  border-bottom: 1px solid #00a5cd; }
   @media screen and (min-width: 600px) {
     .nav {
+      padding: 0;
       display: block;
       height: 40px;
       top: 100px;
@@ -225,7 +228,11 @@ input[type=submit] {
   bottom: 1em;
   left: 1em;
   line-height: 50px;
-  text-align: center; }
+  text-align: center;
+  z-index: 1; }
+  @media screen and (min-width: 600px) {
+    .nav__toggle {
+      display: none; } }
 
 .main__container {
   max-width: 600px;

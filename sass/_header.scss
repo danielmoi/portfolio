@@ -48,11 +48,14 @@
   width: 100%;
   z-index: 1;
   background: $gray;
-  padding: 0;
+  padding: 0 0 80px 0;
   border-top: 1px solid $primary;
+  bottom: 0;
+  border-bottom: 1px solid $primary;
 
 
   @media screen and (min-width: 600px) {
+    padding: 0;
     display: block;
     height: 40px;
     top: 100px;
@@ -84,4 +87,8 @@
   left: 1em;
   line-height: 50px;
   text-align: center;
+  z-index: 1;
+  @media screen and (min-width: 600px) {
+    display: none;
+  }
 }
