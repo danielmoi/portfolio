@@ -219,7 +219,9 @@ input[type=submit] {
   max-width: 600px;
   padding: 1em;
   margin: 0 auto;
-  position: relative;
+  position: absolute;
+  left: 0;
+  right: 0;
   top: 120px;
   margin-bottom: 150px; }
   @media screen and (min-width: 600px) {
