@@ -34,15 +34,18 @@ var indexCurrentProject = 0;
 var arrProjects = [{
   name: 'Musical Monsters',
   img: 'img/musical-monsters.png',
-  desc: 'My final project for General Assembly Web Development Immersive'
+  desc: 'My final project for General Assembly Web Development Immersive',
+  url: 'http://musical-monsters.herokuapp.com'
 }, {
   name: 'Sorter',
   img: 'img/sorter.jpg',
-  desc: 'Project 2 something something'
+  desc: 'Project 2 something something',
+  url: ''
 }, {
   name: 'Nadine Claire Events',
   img: 'img/nadine-claire-events.jpg',
-  desc: 'Events Management'
+  desc: 'Events Management',
+  url: ''
 }];
 
 
@@ -65,6 +68,7 @@ preloadImages(arrProjects);
 $title = $('.project__title');
 $description = $('.project__description');
 $img = $('.project__image');
+$a = $('.project__url');
 
 // Populate project with data
 var populateProject = function(index) {
@@ -72,6 +76,7 @@ var populateProject = function(index) {
   $title.text(objCurrentProject.name);
   $description.text(objCurrentProject.desc);
   $img.attr('src', objCurrentProject.img);
+  $a.attr('href', objCurrentProject.url);
 };
 
 
