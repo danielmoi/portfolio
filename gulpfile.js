@@ -4,6 +4,7 @@ var sass = require('gulp-sass');
 
 gulp.task('watch', function () {
     gulp.watch('sass/**/*.scss', ['sass', browserSync.reload]);
+    gulp.watch('js/**/*.js', browserSync.reload);
     gulp.watch('**/*.html', [browserSync.reload]);
 
 });
