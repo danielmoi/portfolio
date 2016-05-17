@@ -2,13 +2,16 @@ var currentSection = '';
 
 var arrProjects = [{
   name: 'Musical Monsters',
-  img: 'img/musical-monsters.png'
+  img: 'img/musical-monsters.png',
+  desc: 'My final project for General Assembly Web Development Immersive'
 }, {
   name: 'Sorter',
-  img: 'img/sorter.jpg'
+  img: 'img/sorter.jpg',
+  desc: ''
 }, {
   name: 'Nadine Claire Events',
-  img: 'img/nadine-claire-events'
+  img: 'img/nadine-claire-events',
+  desc: ''
 }];
 
 $('.nav__list-item').on('vclick', function(e) {
