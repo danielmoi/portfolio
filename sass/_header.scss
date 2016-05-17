@@ -15,6 +15,7 @@
   height: 70px;
   background: $gray;
   z-index: 1;
+  border-bottom: 1px solid $primary;
   @media screen and (min-width: 600px) {
     height: 100px;
     text-align: center;
@@ -37,9 +38,6 @@
   }
 }
 
-.header__monster {
-  width: 5%;
-}
 .nav {
   display: none;
   max-width: 100%;
