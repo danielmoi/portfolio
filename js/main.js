@@ -8,6 +8,6 @@ $('.nav__list-item').on('vclick', function(e) {
   $('#' + section).fadeIn(300);
 });
 
-$(document).on('swipeleft', function() {
+$('header').on('swipeleft', function() {
   console.log('hello');
 });
