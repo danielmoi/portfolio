@@ -37,3 +37,22 @@ $('.nav__list-item').on('vclick', function(e) {
 $('.project__container').on('vclick', function(e) {
   console.log($('.project__image').attr('src', arrImages[1]));
 });
+
+$title = $('.project__title');
+$description = $('.project__description');
+$img = $('.project__image');
+
+var populateProject = function(index) {
+  $title.text(arrProjects[index].name);
+
+};
+
+var currentProject = 0;
+
+$('.project__overlay--right').on('vclick', function() {
+  currentProject++;
+  if (currentProject === arrProjects.length) {
+    currentProject = 0;
+  }
+  populateProject(currentProject);
+});
