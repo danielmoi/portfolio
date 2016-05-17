@@ -45,6 +45,22 @@ var arrProjects = [{
   desc: 'Events Management'
 }];
 
+
+
+// Preload images
+var preloadImages = function(arr) {
+  var newimages = [];
+
+  for (var i = 0; i < arr.length; i++) {
+    newimages[i] = new Image();
+    newimages[i].src = arr[i].img;
+  }
+};
+
+preloadImages(arrProjects);
+
+
+
 // Element Selectors
 $title = $('.project__title');
 $description = $('.project__description');
