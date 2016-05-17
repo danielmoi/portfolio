@@ -34,9 +34,9 @@ $('.nav__list-item').on('vclick', function(e) {
   $('.nav').toggle();
 });
 
-$('.project__container').on('vclick', function(e) {
-  console.log($('.project__image').attr('src', arrImages[1]));
-});
+// $('.project__container').on('vclick', function(e) {
+//   console.log($('.project__image').attr('src', arrImages[1]));
+// });
 
 $title = $('.project__title');
 $description = $('.project__description');
@@ -49,20 +49,31 @@ var populateProject = function(index) {
 
 var currentProject = 0;
 
-// RIGHT CLICK
-$('.project__overlay--right').on('vclick', function() {
+// PREVIOUS PROJECT
+var projectNext = function() {
   currentProject += 1;
   if (currentProject === arrProjects.length) {
     currentProject = 0;
   }
   populateProject(currentProject);
-});
+};
 
-// LEFT CLICK
-$('.project__overlay--left').on('vclick', function() {
+// NEXT PROJECT
+var projectPrevious = function() {
   currentProject -= 1;
   if (currentProject < 0) {
     currentProject = arrProjects.length - 1;
   }
   populateProject(currentProject);
+};
+
+
+// RIGHT CLICK
+$('.project__overlay--right').on('vclick', function() {
+  projectNext();
+});
+
+// LEFT CLICK
+$('.project__overlay--left').on('vclick', function() {
+  projectPrevious();
 });
