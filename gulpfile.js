@@ -28,4 +28,4 @@ gulp.task('browsersync', function() {
   });
 });
 
-gulp.task("default", ["browsersync", "watch"]);
+gulp.task("default", ['sass', "browsersync", "watch"]);

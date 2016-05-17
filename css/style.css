@@ -1,0 +1,254 @@
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased; }
+
+h1,
+h2,
+h3,
+h4,
+p,
+blockquote,
+figure,
+ol,
+ul {
+  margin: 0;
+  padding: 0; }
+
+main,
+li {
+  display: block; }
+
+strong {
+  font-weight: bold; }
+
+a,
+button {
+  color: inherit;
+  transition: 0.3s; }
+
+a {
+  text-decoration: none; }
+
+button {
+  overflow: visible;
+  border: 0;
+  font: inherit;
+  -webkit-font-smoothing: inherit;
+  letter-spacing: inherit;
+  background: none;
+  cursor: pointer; }
+
+::-moz-focus-inner {
+  padding: 0;
+  border: 0; }
+
+:focus {
+  outline: 0; }
+
+img {
+  max-width: 100%;
+  height: auto;
+  border: 0; }
+
+input[type="button"],
+input[type="submit"],
+input[type="url"],
+button,
+textarea {
+  -webkit-appearance: none;
+  /*Safari/Chrome*/
+  -moz-appearance: none;
+  /*Firefox*/
+  -ms-appearance: none;
+  /*IE*/
+  -o-appearance: none;
+  /*Opera*/
+  appearance: none; }
+
+* {
+  font-family: Helvetica, sans-serif;
+  line-height: 1.3; }
+
+h1 {
+  margin: 0.67em 0; }
+
+p {
+  padding: 0.5em 0; }
+
+p:last-child {
+  margin-bottom: 1em; }
+
+* {
+  box-sizing: border-box; }
+
+body {
+  background: #323232;
+  color: white;
+  font-size: 13px; }
+  @media screen and (min-width: 600px) {
+    body {
+      font-size: 16px; } }
+
+a {
+  cursor: pointer; }
+  a:hover {
+    color: #00a5cd; }
+
+.active {
+  color: #00a5cd;
+  font-weight: 900; }
+
+.btn {
+  font-size: 1em;
+  display: inline-block;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+  border: 1px solid white;
+  background: #323232;
+  color: white; }
+
+.btn:hover {
+  text-decoration: none; }
+
+.btn-container {
+  margin: 2em 0;
+  text-align: center; }
+
+fieldset {
+  border: none;
+  padding-right: 20%;
+  text-align: center; }
+
+input {
+  font-size: 1em;
+  padding: 0.5em;
+  color: #00a5cd;
+  width: 30%; }
+
+input[type=submit] {
+  width: inherit; }
+
+.label {
+  display: inline-block;
+  width: 30%;
+  text-align: right;
+  padding-right: 1em; }
+
+.forms__error-heading {
+  text-align: center;
+  padding: 1em 0; }
+
+.field_with_errors {
+  display: inline; }
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+  padding: 0 1em; }
+
+.header {
+  max-width: 100%;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background: #323232;
+  z-index: 1; }
+  @media screen and (min-width: 600px) {
+    .header {
+      height: 100px;
+      text-align: center; } }
+
+.header__logo {
+  width: 55%;
+  line-height: 100px;
+  vertical-align: middle; }
+
+.header__title {
+  margin: 0;
+  line-height: 70px;
+  color: white;
+  font-weight: 900;
+  text-transform: uppercase; }
+  @media screen and (min-width: 600px) {
+    .header__title {
+      line-height: 100px; } }
+
+.header__monster {
+  width: 5%; }
+
+.nav {
+  display: none;
+  max-width: 100%;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  background: #323232;
+  padding: 0;
+  border-top: 1px solid #00a5cd; }
+  @media screen and (min-width: 600px) {
+    .nav {
+      display: block;
+      height: 40px;
+      top: 100px;
+      border-bottom: 1px solid #00a5cd; } }
+
+.nav__list {
+  line-height: 40px; }
+
+.nav__list-item {
+  display: block;
+  padding: 1em 0;
+  font-size: 1em; }
+  @media screen and (min-width: 600px) {
+    .nav__list-item {
+      display: inline;
+      padding: 0 2em 0 0; } }
+
+.main__container {
+  max-width: 600px;
+  padding: 1em;
+  margin: 0 auto;
+  position: relative;
+  top: 120px;
+  margin-bottom: 150px; }
+  @media screen and (min-width: 600px) {
+    .main__container {
+      top: 150px; } }
+
+.main__title {
+  text-align: left;
+  font-weight: 900;
+  padding: 1em 0 0.25em 0;
+  color: #00a5cd; }
+
+.main__subtitle {
+  font-size: 1em;
+  text-transform: uppercase;
+  font-weight: 700; }
+
+.app {
+  min-height: 100vh; }
+
+.footer {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0; }
+
+.footer__container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0.25em 1em;
+  text-align: center;
+  font-size: 0.8em; }
