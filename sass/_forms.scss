@@ -1,0 +1,31 @@
+fieldset {
+  border: none;
+  padding-right: 20%;
+  text-align: center;
+}
+input {
+  font-size: 1em;
+  padding: 0.5em;
+  color: $primary;
+  width: 30%;
+}
+
+input[type=submit] {
+  width: inherit;
+}
+
+.label {
+  display: inline-block;
+  width: 30%;
+  text-align: right;
+  padding-right: 1em;
+}
+
+.forms__error-heading {
+  text-align: center;
+  padding: 1em 0;
+}
+
+.field_with_errors {
+  display: inline;
+}

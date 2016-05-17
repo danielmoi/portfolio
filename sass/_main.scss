@@ -1,0 +1,28 @@
+.main__container {
+  max-width: 600px;
+  padding: 1em;
+  margin: 0 auto;
+  position: relative;
+  top: 120px;
+  margin-bottom: 150px;
+  @media screen and (min-width: 600px) {
+    top: 150px;
+  }
+}
+
+.main__title {
+  text-align: left;
+  font-weight: 900;
+  padding: 1em 0 0.25em 0;
+  color: $primary;
+}
+
+.main__subtitle {
+  font-size: 1em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.app {
+  min-height: 100vh;
+}
