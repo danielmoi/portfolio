@@ -284,6 +284,18 @@ input[type=submit] {
 .project__url-container {
   text-align: center; }
 
+.arrow-right {
+  position: absolute;
+  width: 40px;
+  right: 1em;
+  top: 50%; }
+
+.arrow-left {
+  position: absolute;
+  width: 40px;
+  left: 1em;
+  top: 50%; }
+
 .footer {
   width: 100%;
   position: fixed;

@@ -118,3 +118,10 @@ $('.project__container').on('swiperight', function() {
 $('.project__container').on('swipeleft', function() {
   projectPrevious();
 });
+
+// Mousein
+$('.project__overlay--right').on('mouseover', function() {
+  console.log('hi');
+});
+
+// Keyboard Events
