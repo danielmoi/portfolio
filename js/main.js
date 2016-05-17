@@ -7,11 +7,11 @@ var arrProjects = [{
 }, {
   name: 'Sorter',
   img: 'img/sorter.jpg',
-  desc: ''
+  desc: 'Project 2 something something'
 }, {
   name: 'Nadine Claire Events',
-  img: 'img/nadine-claire-events',
-  desc: ''
+  img: 'img/nadine-claire-events.jpg',
+  desc: 'Events Management'
 }];
 
 $('.nav__list-item').on('vclick', function(e) {
@@ -22,9 +22,7 @@ $('.nav__list-item').on('vclick', function(e) {
   $('#' + section).fadeIn(300);
 });
 
-$('header').on('swipeleft', function() {
-  console.log('hello');
-});
+
 
 $('.nav__toggle').on('vclick', function(e) {
   $('.nav').toggle();
@@ -43,37 +41,50 @@ $description = $('.project__description');
 $img = $('.project__image');
 
 var populateProject = function(index) {
-  $title.text(arrProjects[index].name);
+  var objCurrentProject = arrProjects[index];
+  $title.text(objCurrentProject.name);
+  $description.text(objCurrentProject.desc);
+  $img.attr('src', objCurrentProject.img);
 
 };
 
-var currentProject = 0;
+var indexCurrentProject = 0;
 
 // PREVIOUS PROJECT
 var projectNext = function() {
-  currentProject += 1;
-  if (currentProject === arrProjects.length) {
-    currentProject = 0;
+  indexCurrentProject += 1;
+  if (indexCurrentProject === arrProjects.length) {
+    indexCurrentProject = 0;
   }
-  populateProject(currentProject);
+  populateProject(indexCurrentProject);
 };
 
 // NEXT PROJECT
 var projectPrevious = function() {
-  currentProject -= 1;
-  if (currentProject < 0) {
-    currentProject = arrProjects.length - 1;
+  indexCurrentProject -= 1;
+  if (indexCurrentProject < 0) {
+    indexCurrentProject = arrProjects.length - 1;
   }
-  populateProject(currentProject);
+  populateProject(indexCurrentProject);
 };
 
 
-// RIGHT CLICK
+// CLICK RIGHT
 $('.project__overlay--right').on('vclick', function() {
   projectNext();
 });
 
-// LEFT CLICK
+// CLICK LEFT
 $('.project__overlay--left').on('vclick', function() {
+  projectPrevious();
+});
+
+// SWIPE RIGHT
+$('.project__container').on('swiperight', function() {
+  projectNext();
+});
+
+// SWIPE LEFT
+$('.project__container').on('swipeleft', function() {
   projectPrevious();
 });
