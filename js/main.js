@@ -7,3 +7,7 @@ $('.nav__list-item').on('vclick', function(e) {
   console.log(section);
   $('#' + section).fadeIn(300);
 });
+
+$(document).on('swipeleft', function() {
+  console.log('hello');
+});
