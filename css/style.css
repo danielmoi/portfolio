@@ -281,6 +281,9 @@ input[type=submit] {
   right: 0;
   width: 50%; }
 
+.project__url-container {
+  text-align: center; }
+
 .footer {
   width: 100%;
   position: fixed;

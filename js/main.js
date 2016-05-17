@@ -34,18 +34,18 @@ var indexCurrentProject = 0;
 var arrProjects = [{
   name: 'Musical Monsters',
   img: 'img/musical-monsters.png',
-  desc: 'My final project for General Assembly Web Development Immersive',
-  url: 'http://musical-monsters.herokuapp.com'
+  desc: 'A fun and interactive app that allows you to experiment with music. See monsters dance to your choice of music, play the drums and piano, and more!',
+  url: 'https://musical-monsters.herokuapp.com'
 }, {
   name: 'Sorter',
   img: 'img/sorter.jpg',
-  desc: 'Project 2 something something',
-  url: ''
+  desc: 'An app for sorting and storing your web bookmarks, with custom categories, favourites, and a reading list.',
+  url: 'https://sorter-4000.herokuapp.com/'
 }, {
   name: 'Nadine Claire Events',
   img: 'img/nadine-claire-events.jpg',
-  desc: 'Events Management',
-  url: ''
+  desc: 'Website for Nadine Claire Events, a boutique event management company in Sydney.',
+  url: 'http://nadineclaireevents.com/'
 }];
 
 
