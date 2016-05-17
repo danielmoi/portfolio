@@ -49,10 +49,20 @@ var populateProject = function(index) {
 
 var currentProject = 0;
 
+// RIGHT CLICK
 $('.project__overlay--right').on('vclick', function() {
-  currentProject++;
+  currentProject += 1;
   if (currentProject === arrProjects.length) {
     currentProject = 0;
+  }
+  populateProject(currentProject);
+});
+
+// LEFT CLICK
+$('.project__overlay--left').on('vclick', function() {
+  currentProject -= 1;
+  if (currentProject < 0) {
+    currentProject = arrProjects.length - 1;
   }
   populateProject(currentProject);
 });
