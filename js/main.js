@@ -29,7 +29,9 @@ $('.nav__toggle').on('vclick', function(e) {
 });
 
 $('.nav__list-item').on('vclick', function(e) {
-  $('.nav').toggle();
+  if ($('.nav__list-item').css('display') === 'block') {
+    $('.nav').toggle();    
+  }
 });
 
 // $('.project__container').on('vclick', function(e) {
