@@ -1,4 +1,4 @@
-$('.nav__list-item').on('click', function(e) {
+$('.nav__list-item').on('vclick', function(e) {
   // console.log($(this));
   // console.log($(this).children()[0].attr('data-section'));
   // console.log($(this).children()[0]);
