@@ -137,6 +137,9 @@ $('.project__container').on('mouseleave', function() {
 // Keyboard Events
 $(document).on('keydown', function(e) {
 
+  if (currentSection !== 'projects') {
+    return;
+  }
   // Right Arrow
   if (e.which === 39) {
     projectNext();
