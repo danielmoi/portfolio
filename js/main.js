@@ -116,7 +116,10 @@ var populateProject = function(index) {
   var objCurrentProject = arrProjects[index];
   $title.text(objCurrentProject.name);
   $description.text(objCurrentProject.desc);
-  $img.attr('src', objCurrentProject.img);
+  $img.fadeOut(100, function() {
+    $img.attr('src', objCurrentProject.img);
+      $img.fadeIn(100);
+  });
   // console.log(objCurrentProject.img);
   // console.log($img.attr('src'));
   $a.attr('href', objCurrentProject.url);
