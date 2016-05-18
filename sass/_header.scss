@@ -65,6 +65,9 @@
 .nav__list {
   line-height: 40px;
 }
+.nav__active {
+  color: $primary;
+}
 .nav__list-item {
   display: block;
   padding: 1em 0;

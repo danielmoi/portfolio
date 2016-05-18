@@ -208,6 +208,9 @@ input[type=submit] {
 .nav__list {
   line-height: 40px; }
 
+.nav__active {
+  color: #00a5cd; }
+
 .nav__list-item {
   display: block;
   padding: 1em 0;
