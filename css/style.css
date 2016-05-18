@@ -286,7 +286,8 @@ input[type=submit] {
 
 .project__container {
   position: relative;
-  margin: 2em 0; }
+  margin: 2em 0;
+  cursor: pointer; }
 
 .project__overlay--left {
   position: absolute;
