@@ -21,8 +21,24 @@ $('.nav__list-item').on('vclick', function(e) {
     $('.nav').toggle();
   }
 });
+////////////////////////////////////////////////////////////////////////////
 
+// DESIGN
+var arrDesign = [{
+  img: 'img/54_150202_zjoli.png'
+}];
 
+for (var i = 0; i < arrDesign.length; i++) {
+  $img = $('<img>');
+  $img.attr('src', arrDesign[i].img);
+  $('.design__container').append($img);
+  $img = $('<img>');
+  $img.attr('src', arrDesign[i].img);
+  $('.design__container').append($img);
+  $img = $('<img>');
+  $img.attr('src', arrDesign[i].img);
+  $('.design__container').append($img);
+}
 
 ////////////////////////////////////////////////////////////////////////////
 
