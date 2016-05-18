@@ -35,17 +35,20 @@ var arrProjects = [{
   name: 'Musical Monsters',
   img: 'img/musical-monsters.png',
   desc: 'A fun and interactive app that allows you to experiment with music. See monsters dance to your choice of music, play the drums and piano, and more!',
-  url: 'https://musical-monsters.herokuapp.com'
+  url: 'https://musical-monsters.herokuapp.com',
+  tech: 'Rails, D3.js, Three.js, Greensock, Web Audio API'
 }, {
   name: 'Sorter',
   img: 'img/sorter.jpg',
   desc: 'An app for sorting and storing your web bookmarks, with custom categories, favourites, and a reading list.',
-  url: 'https://sorter-4000.herokuapp.com/'
+  url: 'https://sorter-4000.herokuapp.com/',
+  tech: 'Rails, Cloudinary, ChartJS'
 }, {
   name: 'Nadine Claire Events',
   img: 'img/nadine-claire-events.jpg',
   desc: 'Website for Nadine Claire Events, a boutique event management company in Sydney.',
-  url: 'http://nadineclaireevents.com/'
+  url: 'http://nadineclaireevents.com/',
+  tech: 'Wordpress, HTML5, CSS3'
 }];
 
 
@@ -69,6 +72,7 @@ $title = $('.project__title');
 $description = $('.project__description');
 $img = $('.project__image');
 $a = $('.project__url');
+$tech = $('.project__tech');
 
 // Populate project with data
 var populateProject = function(index) {
@@ -77,6 +81,7 @@ var populateProject = function(index) {
   $description.text(objCurrentProject.desc);
   $img.attr('src', objCurrentProject.img);
   $a.attr('href', objCurrentProject.url);
+  $tech.text(objCurrentProject.tech);
 };
 
 
