@@ -23,21 +23,57 @@ $('.nav__list-item').on('vclick', function(e) {
 });
 ////////////////////////////////////////////////////////////////////////////
 
+// HOME
+
+var src = 'img/butterfly.svg';
+var $butterfly = $('<img>');
+$butterfly.attr('src', src);
+$butterfly.addClass('butterfly');
+
+$('.butterflies__container').append($butterfly);
+
+var tlRotate = new TimelineLite({
+  // paused: true
+});
+// tlButterfly.to($butterfly, 3, { x: -100 });
+
+tlRotate.to($butterfly, 0.2, {
+  rotation: 15,
+  transformOrigin: '50% 50%',
+  ease: Power0.easeIn,
+  yoyo: true,
+  repeat: -1
+});
+var magic = function() {
+  console.log('hello');
+  $butterfly.remove();
+};
+
+var tlMove = new TimelineLite();
+tlMove.to($butterfly, 5, {
+  left: 800,
+  top: 200,
+  onComplete: magic
+});
+
+
+
+$(document).on('click', function() {
+  tlButterfly.pause();
+});
+
+////////////////////////////////////////////////////////////////////////////
+
 // DESIGN
 var arrDesign = [{
   img: 'img/54_150202_zjoli.png'
 }];
 
 for (var i = 0; i < arrDesign.length; i++) {
-  $img = $('<img>');
+  var $img = $('<img>');
   $img.attr('src', arrDesign[i].img);
   $('.design__container').append($img);
-  $img = $('<img>');
-  $img.attr('src', arrDesign[i].img);
-  $('.design__container').append($img);
-  $img = $('<img>');
-  $img.attr('src', arrDesign[i].img);
-  $('.design__container').append($img);
+
 }
 
 ////////////////////////////////////////////////////////////////////////////
