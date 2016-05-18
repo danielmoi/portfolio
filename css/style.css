@@ -265,6 +265,9 @@ input[type=submit] {
 #contact {
   display: none; }
 
+.about__details {
+  font-style: italic; }
+
 .project__container {
   position: relative;
   margin: 2em 0; }
@@ -307,6 +310,12 @@ input[type=submit] {
   width: 40px;
   left: 1em;
   top: 50%; }
+
+.contact__details {
+  font-style: italic; }
+
+.contact__subtitle {
+  margin-top: 1.5em; }
 
 .footer {
   width: 100%;
