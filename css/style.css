@@ -78,7 +78,8 @@ h1 {
   margin: 0.67em 0; }
 
 p {
-  padding: 0.5em 0; }
+  padding: 0.5em 0;
+  max-width: 700px; }
 
 p:last-child {
   margin-bottom: 1em; }
@@ -90,7 +91,7 @@ body {
   background: #323232;
   color: white;
   font-size: 13px; }
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: 800px) {
     body {
       font-size: 16px; } }
 
@@ -148,7 +149,7 @@ input[type=submit] {
   display: inline; }
 
 .container {
-  max-width: 600px;
+  max-width: 800px;
   margin: 0 auto;
   text-align: left;
   padding: 0 1em; }
@@ -164,7 +165,7 @@ input[type=submit] {
   background: #323232;
   z-index: 1;
   border-bottom: 1px solid #00a5cd; }
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: 800px) {
     .header {
       height: 100px;
       text-align: center; } }
@@ -173,6 +174,9 @@ input[type=submit] {
   width: 55%;
   line-height: 100px;
   vertical-align: middle; }
+  @media screen and (min-width: 440px) {
+    .header__logo {
+      width: 35%; } }
 
 .header__title {
   margin: 0;
@@ -180,7 +184,7 @@ input[type=submit] {
   color: white;
   font-weight: 900;
   text-transform: uppercase; }
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: 800px) {
     .header__title {
       line-height: 100px; } }
 
@@ -192,11 +196,11 @@ input[type=submit] {
   width: 100%;
   z-index: 1;
   background: #323232;
-  padding: 0 0 80px 0;
+  padding: 0 0 80px;
   border-top: 1px solid #00a5cd;
   bottom: 0;
   border-bottom: 1px solid #00a5cd; }
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: 800px) {
     .nav {
       padding: 0;
       display: block;
@@ -215,7 +219,7 @@ input[type=submit] {
   display: block;
   padding: 1em 0;
   font-size: 1em; }
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: 800px) {
     .nav__list-item {
       display: inline;
       padding: 0 2em 0 0; } }
@@ -232,12 +236,12 @@ input[type=submit] {
   line-height: 50px;
   text-align: center;
   z-index: 1; }
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: 800px) {
     .nav__toggle {
       display: none; } }
 
 .main__container {
-  max-width: 600px;
+  max-width: 800px;
   padding: 1em;
   margin: 0 auto;
   position: absolute;
@@ -245,7 +249,7 @@ input[type=submit] {
   right: 0;
   top: 70px;
   margin-bottom: 150px; }
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: 800px) {
     .main__container {
       top: 150px; } }
 
@@ -265,6 +269,7 @@ input[type=submit] {
 
 #about,
 #projects,
+#design,
 #contact {
   display: none; }
 
@@ -331,7 +336,7 @@ input[type=submit] {
   background: #323232; }
 
 .footer__container {
-  max-width: 600px;
+  max-width: 800px;
   margin: 0 auto;
   padding: 0.25em 1em;
   text-align: center;

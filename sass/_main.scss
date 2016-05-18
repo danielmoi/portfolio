@@ -1,5 +1,5 @@
 .main__container {
-  max-width: 600px;
+  max-width: $breakpoint;
   padding: 1em;
   margin: 0 auto;
   position: absolute;
@@ -7,7 +7,7 @@
   right: 0;
   top: 70px;
   margin-bottom: 150px;
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: $breakpoint) {
     top: 150px;
   }
 }
@@ -31,6 +31,7 @@
 
 #about,
 #projects,
+#design,
 #contact {
   display: none;
 }
