@@ -2,7 +2,6 @@ var $topLeft = $('#boxTopLeft').css('x');
 
 var tlTop = new TimelineMax();
 var $monster = $('#monster');
-console.log($monster.css('left'));
 
 tlTop.to($monster, 2, {x: -250 });
 

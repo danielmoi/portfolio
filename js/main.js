@@ -58,19 +58,6 @@ $(document).on('click', function() {
   tlRotate.pause();
 });
 
-////////////////////////////////////////////////////////////////////////////
-
-// DESIGN
-var arrDesign = [{
-  img: 'img/54_150202_zjoli.png'
-}];
-
-for (var i = 0; i < arrDesign.length; i++) {
-  var $img = $('<img>');
-  $img.attr('src', arrDesign[i].img);
-  $('.design__container').append($img);
-
-}
 
 ////////////////////////////////////////////////////////////////////////////
 
@@ -130,6 +117,8 @@ var populateProject = function(index) {
   $title.text(objCurrentProject.name);
   $description.text(objCurrentProject.desc);
   $img.attr('src', objCurrentProject.img);
+  // console.log(objCurrentProject.img);
+  // console.log($img.attr('src'));
   $a.attr('href', objCurrentProject.url);
   $tech.text(objCurrentProject.tech);
 };

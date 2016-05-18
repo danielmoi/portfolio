@@ -67,11 +67,11 @@ var arrImagesDesign = [];
 for (var i = 0; i < arrDesign.length; i++) {
   var $div = $('<div>');
   $div.addClass('design__image-container');
-  var $img = $('<img>');
-  $img.addClass('design__image');
-  $img.attr('src', 'img/' + arrDesign[i]);
-  arrImagesDesign.push($img);
-  $div.append($img);
+  var $imgDesign = $('<img>');
+  $imgDesign.addClass('design__image');
+  $imgDesign.attr('src', 'img/' + arrDesign[i]);
+  arrImagesDesign.push($imgDesign);
+  $div.append($imgDesign);
   $('.design__gallery').append($div);
 
 
