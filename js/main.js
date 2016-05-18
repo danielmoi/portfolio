@@ -25,12 +25,8 @@ $('.nav__list-item').on('vclick', function(e) {
 
 // HOME
 
-var src = 'img/butterfly.svg';
-var $butterfly = $('<img>');
-$butterfly.attr('src', src);
-$butterfly.addClass('butterfly');
+var $butterfly = $('.butterfly-small');
 
-$('.butterflies__container').append($butterfly);
 
 var tlRotate = new TimelineLite({
   // paused: true
@@ -46,20 +42,20 @@ tlRotate.to($butterfly, 0.2, {
 });
 var magic = function() {
   console.log('hello');
-  $butterfly.remove();
+  // $butterfly.remove();
 };
 
 var tlMove = new TimelineLite();
 tlMove.to($butterfly, 5, {
-  left: 800,
-  top: 200,
+  left: '50%',
+  top: '-1px',
   onComplete: magic
-});
+}, 2);
 
 
 
 $(document).on('click', function() {
-  tlButterfly.pause();
+  tlRotate.pause();
 });
 
 ////////////////////////////////////////////////////////////////////////////

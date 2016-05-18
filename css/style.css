@@ -267,12 +267,10 @@ input[type=submit] {
 .butterflies__container {
   position: relative; }
 
-.butterfly {
-  width: 100px;
-  position: absolute; }
-
 .butterfly-small {
-  width: 30px; }
+  width: 30px;
+  position: absolute;
+  z-index: 2; }
 
 .app {
   min-height: 100vh; }
