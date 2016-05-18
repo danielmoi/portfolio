@@ -123,18 +123,14 @@ var $arrowRight = $('.arrow-right');
 var $arrowLeft = $('.arrow-left');
 
 // Mouse in
-$('.project__overlay--right').on('mouseover', function() {
+$('.project__container').on('mouseover', function() {
   $arrowRight.fadeIn();
-});
-$('.project__overlay--left').on('mouseover', function() {
   $arrowLeft.fadeIn();
 });
 
 // Mouse out
-$('.project__overlay--right').on('mouseout', function() {
+$('.project__container').on('mouseleave', function() {
   $arrowRight.fadeOut();
-});
-$('.project__overlay--left').on('mouseout', function() {
   $arrowLeft.fadeOut();
 });
 
