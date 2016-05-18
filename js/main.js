@@ -119,9 +119,23 @@ $('.project__container').on('swipeleft', function() {
   projectPrevious();
 });
 
-// Mousein
+var $arrowRight = $('.arrow-right');
+var $arrowLeft = $('.arrow-left');
+
+// Mouse in
 $('.project__overlay--right').on('mouseover', function() {
-  console.log('hi');
+  $arrowRight.fadeIn();
+});
+$('.project__overlay--left').on('mouseover', function() {
+  $arrowLeft.fadeIn();
+});
+
+// Mouse out
+$('.project__overlay--right').on('mouseout', function() {
+  $arrowRight.fadeOut();
+});
+$('.project__overlay--left').on('mouseout', function() {
+  $arrowLeft.fadeOut();
 });
 
 // Keyboard Events

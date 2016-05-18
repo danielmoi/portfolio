@@ -285,12 +285,14 @@ input[type=submit] {
   text-align: center; }
 
 .arrow-right {
+  display: none;
   position: absolute;
   width: 40px;
   right: 1em;
   top: 50%; }
 
 .arrow-left {
+  display: none;
   position: absolute;
   width: 40px;
   left: 1em;
