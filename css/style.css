@@ -281,6 +281,9 @@ input[type=submit] {
   right: 0;
   width: 50%; }
 
+.project__url {
+  color: #00a5cd; }
+
 .project__url-container {
   text-align: center; }
 

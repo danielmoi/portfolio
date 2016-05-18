@@ -52,14 +52,9 @@
   right: 0;
   width: 50%;
 }
-// .project__overlay--right-arrow {
-//   position: absolute;
-//   background-image: url(../img/arrow-right.png);
-//   background-repeat: no-repeat;
-//   height: 100%;
-//   right: 0;
-//   width: 50%;
-// }
+.project__url {
+  color: $primary;
+}
 
 .project__url-container {
   text-align: center;
