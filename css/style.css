@@ -264,7 +264,19 @@ input[type=submit] {
   z-index: 6; }
 
 .modal__image {
+  margin: auto;
+  height: 70%; }
+
+.modal__title {
+  text-transform: uppercase;
+  font-weight: 900; }
+
+.modal__description {
+  width: 80%;
   margin: auto; }
+
+.modal__tools {
+  font-style: italic; }
 
 .main__container {
   max-width: 800px;

@@ -102,6 +102,23 @@ var populateProject = function(index) {
   $tech.text(objCurrentProject.tech);
 };
 
+$modalTitle = $('.modal__title');
+$modalDesc = $('.modal__description');
+$modalImg = $('.modal__image');
+$modalTools = $('.modal__tools');
+$modalLink = $('.modal__link');
+$modalURL = $('.modal_url');
+
+var populateModal = function(index) {
+  var objCurrentProject = arrProjects[index];
+  $modalTitle.text(objCurrentProject.name);
+  $modalDesc.text(objCurrentProject.desc);
+  $modalImg.attr('src', objCurrentProject.img);
+  $modalTools.text('Tools: ' + objCurrentProject.tech);
+  $modalLink.attr('href', objCurrentProject.url);
+  $modalLink.text('Check it out here');
+};
+
 
 // Previous project
 var projectNext = function() {
@@ -125,9 +142,8 @@ $('.project__image-container').on('click', function() {
   $('.overlay').show();
   $('.modal__container').show();
   var index = $(this).attr('data-project-index');
-  console.log(arrProjects[index].img);
-  var imgSrc = arrProjects[index].img;
-  $('.modal__image').attr('src', imgSrc)
+  populateModal(index);
+
 });
 
 // Click Right
@@ -156,7 +172,7 @@ var $arrowLeft = $('.arrow-left');
 // Mouse in
 $('.project__image-container').on('mouseover', function() {
   $(this).children().fadeIn(100);
-})
+});
 
 $('.project__container').on('mouseover', function() {
   $arrowRight.fadeIn();
@@ -166,7 +182,7 @@ $('.project__container').on('mouseover', function() {
 // Mouse out
 $('.project__image-container').on('mouseleave', function() {
   $(this).find('.project__image-info').fadeOut(100);
-})
+});
 $('.project__container').on('mouseleave', function() {
   $arrowRight.fadeOut();
   $arrowLeft.fadeOut();
