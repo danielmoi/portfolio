@@ -198,6 +198,12 @@ $('.project__container').on('mouseleave', function() {
 // Keyboard Events
 $(document).on('keydown', function(e) {
 
+  // Esc key
+  if (e.which === 27) {
+    $('.overlay').fadeOut(100);
+    $('.modal__container').hide();
+  }
+
   if (currentSection !== 'projects') {
     return;
   }
