@@ -240,6 +240,20 @@ input[type=submit] {
     .nav__toggle {
       display: none; } }
 
+.overlay {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.7);
+  top: 140px;
+  height: 100%;
+  width: 100%; }
+
+.modal__container {
+  position: fixed;
+  top: 140px;
+  height: calc(100% - 140px);
+  width: 100%;
+  padding: 3em; }
+
 .main__container {
   max-width: 800px;
   padding: 1em;

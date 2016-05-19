@@ -121,6 +121,7 @@ var projectPrevious = function() {
 };
 
 
+
 // Click Right
 $('.project__overlay--right').on('vclick', function() {
   projectNext();
