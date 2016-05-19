@@ -3,6 +3,7 @@
 // Counters
 var currentSection = '';
 var indexCurrentProject = 0;
+var currentProject = 0;
 
 // Project Data
 var arrProjects = [{
@@ -117,34 +118,35 @@ var populateModal = function(index) {
   $modalTools.text('Tools: ' + objCurrentProject.tech);
   // $modalLink.attr('href', objCurrentProject.url);
   $modalLink.text('Check it out here');
+
 };
 
 
 // Previous project
 var projectNext = function() {
-  indexCurrentProject += 1;
-  if (indexCurrentProject === arrProjects.length) {
-    indexCurrentProject = 0;
+  currentProject += 1;
+  if (currentProject === arrProjects.length) {
+    currentProject = 0;
   }
-  populateProject(indexCurrentProject);
+  populateModal(currentProject);
 };
 
 // Next project
 var projectPrevious = function() {
-  indexCurrentProject -= 1;
-  if (indexCurrentProject < 0) {
-    indexCurrentProject = arrProjects.length - 1;
+  currentProject -= 1;
+  if (currentProject < 0) {
+    currentProject = arrProjects.length - 1;
   }
-  populateProject(indexCurrentProject);
+  populateModal(currentProject);
 };
 
 // Click modal
 $('.project__image-container').on('click', function() {
   $('.overlay').show();
   $('.modal__container').show();
-  var index = $(this).attr('data-project-index');
+  var index = parseInt($(this).attr('data-project-index'));
   populateModal(index);
-
+  currentProject = index;
 });
 
 // Click overlay
@@ -154,12 +156,12 @@ $('.overlay').on('click', function() {
 });
 
 // Click Right
-$('.project__overlay--right').on('vclick', function() {
+$('.modal__overlay--right').on('vclick', function() {
   projectNext();
 });
 
 // Click Left
-$('.project__overlay--left').on('vclick', function() {
+$('.modal__overlay--left').on('vclick', function() {
   projectPrevious();
 });
 
