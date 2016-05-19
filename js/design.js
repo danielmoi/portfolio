@@ -81,11 +81,29 @@ $('.design__image-container').on('click', function() {
   console.log($(this).attr('data-project-index'));
   $('.overlay').show();
   $('.modal__container').show();
-  var index = $(this).attr('data-project-index');
+  var index = parseInt($(this).attr('data-project-index'));
   populateModalDesign(index);
+  currentSection = 'design';
+  currentDesign = index;
 });
 
 var populateModalDesign = function(index) {
   var img = arrDesign[index];
   $modalImg.attr('src', 'img/' + img);
+};
+
+var designNext = function() {
+  currentDesign += 1;
+  if (currentDesign === arrDesign.length) {
+    currentDesign = 0;
+  }
+  populateModalDesign(currentDesign);
+};
+
+var designPrevious = function() {
+  currentDesign -= 1;
+  if (currentDesign < 0) {
+    currentDesign = arrDesign.length - 1;
+  }
+  populateModalDesign(currentDesign);
 };

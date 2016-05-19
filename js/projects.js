@@ -3,6 +3,7 @@
 // Counters
 var currentSection = '';
 var currentProject = 0;
+var currentDesign = 0;
 
 // Project Data
 var arrProjects = [{
@@ -135,22 +136,42 @@ $('.overlay').on('click', function() {
 
 // Click Right
 $('.modal__overlay--right').on('vclick', function() {
-  projectNext();
+  if (currentSection === 'projects') {
+    projectNext();
+  }
+  else if (currentSection === 'design') {
+    designNext();
+  }
 });
 
 // Click Left
 $('.modal__overlay--left').on('vclick', function() {
-  projectPrevious();
+  if (currentSection === 'projects') {
+    projectPrevious();
+  }
+  else if (currentSection === 'design') {
+    designPrevious();
+  }
 });
 
 // Swipe Right
 $('.modal__image').on('swiperight', function() {
-  projectNext();
+  if (currentSection === 'projects') {
+    projectNext();
+  }
+  else if (currentSection === 'design') {
+    designNext();
+  }
 });
 
 // Swipe Left
 $('.modal__image').on('swipeleft', function() {
-  projectPrevious();
+  if (currentSection === 'projects') {
+    projectPrevious();
+  }
+  else if (currentSection === 'design') {
+    designPrevious();
+  }
 });
 
 // Mouse in
