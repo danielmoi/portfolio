@@ -23,10 +23,11 @@
   z-index: 6;
 }
 
-.modal__image {
+.modal__image-container {
   margin: auto;
   height: 70%;
   width: auto;
+  position: relative;
 }
 .modal__title {
   text-transform: uppercase;
@@ -40,14 +41,14 @@
   font-style: italic;
 }
 .modal__overlay--right {
-  height: 60%;
+  height: 100%;
   width: 50%;
   right: 0;
   // background: red;
   position: absolute;
 }
 .modal__overlay--left {
-  height: 60%;
+  height: 100%;
   width: 50%;
   left: 0;
   // background: blue;
