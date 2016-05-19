@@ -468,6 +468,8 @@ input[type=submit] {
   @media screen and (min-width: 800px) {
     .design__image-container {
       width: 25%; } }
+  .design__image-container:hover {
+    background: #000; }
 
 .design__image-container:before {
   content: "";
