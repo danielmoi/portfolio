@@ -2,11 +2,11 @@
   max-width: $breakpoint;
   padding: 1em;
   margin: 0 auto;
-  position: absolute;
+  // position: absolute;
   left: 0;
   right: 0;
   top: 70px;
-  margin-bottom: 150px;
+  padding-top: 150px;
   @media screen and (min-width: $breakpoint) {
     top: 150px;
   }
@@ -42,7 +42,7 @@
 #projects,
 #design,
 #contact {
-  display: none;
+  // display: none;
 }
 
 .about__details {
@@ -100,11 +100,28 @@
 .design__container {
   margin: 2em 0;
 }
-
+.contact__container {
+  margin-bottom: 50vh;
+}
 .contact__details {
   font-style: italic;
 }
 
 .contact__subtitle {
   margin-top: 1.5em;
+}
+
+.bottom__container {
+  margin-bottom: 50%;
+  color: $primary;
+  text-align: center;
+}
+
+.bottom__monster-container {
+  width: 20%;
+  margin: 2em auto;
+}
+
+.bottom__text {
+  max-width: 100%;
 }

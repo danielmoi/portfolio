@@ -244,11 +244,10 @@ input[type=submit] {
   max-width: 800px;
   padding: 1em;
   margin: 0 auto;
-  position: absolute;
   left: 0;
   right: 0;
   top: 70px;
-  margin-bottom: 150px; }
+  padding-top: 150px; }
   @media screen and (min-width: 800px) {
     .main__container {
       top: 150px; } }
@@ -274,12 +273,6 @@ input[type=submit] {
 
 .app {
   min-height: 100vh; }
-
-#about,
-#projects,
-#design,
-#contact {
-  display: none; }
 
 .about__details {
   font-style: italic; }
@@ -331,11 +324,26 @@ input[type=submit] {
 .design__container {
   margin: 2em 0; }
 
+.contact__container {
+  margin-bottom: 50vh; }
+
 .contact__details {
   font-style: italic; }
 
 .contact__subtitle {
   margin-top: 1.5em; }
+
+.bottom__container {
+  margin-bottom: 50%;
+  color: #00a5cd;
+  text-align: center; }
+
+.bottom__monster-container {
+  width: 20%;
+  margin: 2em auto; }
+
+.bottom__text {
+  max-width: 100%; }
 
 .footer {
   width: 100%;
