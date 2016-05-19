@@ -63,6 +63,19 @@ var preloadImages = function(arr) {
 
 preloadImages(arrProjects);
 
+var arrImagesProjects = [];
+
+for (var i = 0; i < arrProjects.length; i++) {
+  var $divProject = $('<div>');
+  $divProject.addClass('project__image-container');
+  var $imgProject = $('<img>');
+  $imgProject.addClass('project__image');
+  $imgProject.attr('src', arrProjects[i].img);
+  arrImagesProjects.push($imgProject);
+  $divProject.append($imgProject);
+  $('.project__gallery').append($divProject);
+
+}
 
 
 // Element Selectors

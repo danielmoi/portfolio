@@ -1,0 +1,31 @@
+.project__image-container {
+  position: relative;
+  width: 50%;
+  display: inline-block;
+  cursor: pointer;
+  @media screen and (min-width: 600px) {
+    // width: 33%;
+  }
+  @media screen and (min-width: 800px) {
+    // width: 25%;
+  }
+}
+
+.project__image-container:before {
+  content: '';
+  display: block;
+  padding-top: 100%;
+}
+
+.project__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0.5em;
+  opacity: 0.95;
+  &:hover {
+    opacity: 1;
+  }
+}

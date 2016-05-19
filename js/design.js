@@ -60,7 +60,6 @@ var arrDesign = [
     '362_151209_gemstar.jpg'
   ];
 
-console.log(arrDesign.length);
 
 var arrImagesDesign = [];
 
