@@ -265,7 +265,7 @@ input[type=submit] {
 
 .modal__image {
   margin: auto;
-  height: 70%; }
+  max-height: 70%; }
 
 .modal__title {
   text-transform: uppercase;
