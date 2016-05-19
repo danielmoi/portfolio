@@ -68,6 +68,7 @@ var arrImagesProjects = [];
 for (var i = 0; i < arrProjects.length; i++) {
   var $divProject = $('<div>');
   $divProject.addClass('project__image-container');
+  $divProject.attr('data-project-index', i);
   var $divInfo = $('<div>').addClass('project__image-info');
   $divInfo.text(arrProjects[i].name);
   $divProject.append($divInfo);
@@ -120,7 +121,14 @@ var projectPrevious = function() {
   populateProject(indexCurrentProject);
 };
 
-
+$('.project__image-container').on('click', function() {
+  $('.overlay').show();
+  $('.modal__container').show();
+  var index = $(this).attr('data-project-index');
+  console.log(arrProjects[index].img);
+  var imgSrc = arrProjects[index].img;
+  $('.modal__image').attr('src', imgSrc)
+});
 
 // Click Right
 $('.project__overlay--right').on('vclick', function() {
