@@ -166,12 +166,12 @@ $('.modal__overlay--left').on('vclick', function() {
 });
 
 // Swipe Right
-$('.project__container').on('swiperight', function() {
+$('.modal__image').on('swiperight', function() {
   projectNext();
 });
 
 // Swipe Left
-$('.project__container').on('swipeleft', function() {
+$('.modal__image').on('swipeleft', function() {
   projectPrevious();
 });
 
