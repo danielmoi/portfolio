@@ -183,7 +183,7 @@ $('.project__image-container').on('mouseover', function() {
   $(this).children().fadeIn(100);
 });
 
-$('.project__container').on('mouseover', function() {
+$('.modal__image-container').on('mouseover', function() {
   $arrowRight.fadeIn();
   $arrowLeft.fadeIn();
 });
@@ -192,7 +192,7 @@ $('.project__container').on('mouseover', function() {
 $('.project__image-container').on('mouseleave', function() {
   $(this).find('.project__image-info').fadeOut(100);
 });
-$('.project__container').on('mouseleave', function() {
+$('.modal__image-container').on('mouseleave', function() {
   $arrowRight.fadeOut();
   $arrowLeft.fadeOut();
 });
