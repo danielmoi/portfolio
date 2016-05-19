@@ -83,24 +83,24 @@ for (var i = 0; i < arrProjects.length; i++) {
 
 
 // Element Selectors
-$title = $('.project__title');
-$description = $('.project__description');
-$img = $('.project__image');
-$a = $('.project__url');
-$tech = $('.project__tech');
+// $title = $('.project__title');
+// $description = $('.project__description');
+// $img = $('.project__image');
+// $a = $('.project__url');
+// $tech = $('.project__tech');
 
 // Populate project with data
-var populateProject = function(index) {
-  var objCurrentProject = arrProjects[index];
-  $title.text(objCurrentProject.name);
-  $description.text(objCurrentProject.desc);
-  $img.fadeOut(100, function() {
-    $img.attr('src', objCurrentProject.img);
-      $img.fadeIn(100);
-  });
-  $a.attr('href', objCurrentProject.url);
-  $tech.text(objCurrentProject.tech);
-};
+// var populateProject = function(index) {
+//   var objCurrentProject = arrProjects[index];
+//   $title.text(objCurrentProject.name);
+//   $description.text(objCurrentProject.desc);
+//   $img.fadeOut(100, function() {
+//     $img.attr('src', objCurrentProject.img);
+//       $img.fadeIn(100);
+//   });
+//   $a.attr('href', objCurrentProject.url);
+//   $tech.text(objCurrentProject.tech);
+// };
 
 $modalTitle = $('.modal__title');
 $modalDesc = $('.modal__description');
@@ -115,7 +115,7 @@ var populateModal = function(index) {
   $modalDesc.text(objCurrentProject.desc);
   $modalImg.attr('src', objCurrentProject.img);
   $modalTools.text('Tools: ' + objCurrentProject.tech);
-  $modalLink.attr('href', objCurrentProject.url);
+  // $modalLink.attr('href', objCurrentProject.url);
   $modalLink.text('Check it out here');
 };
 
@@ -138,12 +138,19 @@ var projectPrevious = function() {
   populateProject(indexCurrentProject);
 };
 
+// Click modal
 $('.project__image-container').on('click', function() {
   $('.overlay').show();
   $('.modal__container').show();
   var index = $(this).attr('data-project-index');
   populateModal(index);
 
+});
+
+// Click overlay
+$('.overlay').on('click', function() {
+  $('.overlay').fadeOut(100);
+  $('.modal__container').hide();
 });
 
 // Click Right
