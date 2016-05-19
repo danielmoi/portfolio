@@ -64,17 +64,28 @@ var arrDesign = [
 var arrImagesDesign = [];
 
 for (var i = 0; i < arrDesign.length; i++) {
-  var $div = $('<div>');
-  $div.addClass('design__image-container');
+  var $divDesign = $('<div>');
+  $divDesign.addClass('design__image-container');
+  $divDesign.attr('data-project-index', i);
+
   var $imgDesign = $('<img>');
   $imgDesign.addClass('design__image');
   $imgDesign.attr('src', 'img/' + arrDesign[i]);
   arrImagesDesign.push($imgDesign);
-  $div.append($imgDesign);
-  $('.design__gallery').append($div);
+  $divDesign.append($imgDesign);
+  $('.design__gallery').append($divDesign);
 }
 
-$('.design__image').on('click', function() {
+$('.design__image-container').on('click', function() {
   // $(this).parent().css('width', '100%');
-  console.log($(this).css('width'));
+  console.log($(this).attr('data-project-index'));
+  $('.overlay').show();
+  $('.modal__container').show();
+  var index = $(this).attr('data-project-index');
+  populateModalDesign(index);
 });
+
+var populateModalDesign = function(index) {
+  var img = arrDesign[index];
+  $modalImg.attr('src', 'img/' + img);
+};

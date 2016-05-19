@@ -92,7 +92,7 @@ var $modalURL = $('.modal_url');
 var $arrowRight = $('.arrow-right');
 var $arrowLeft = $('.arrow-left');
 
-var populateModal = function(index) {
+var populateModalProject = function(index) {
   var objCurrentProject = arrProjects[index];
   $modalTitle.text(objCurrentProject.name);
   $modalDesc.text(objCurrentProject.desc);
@@ -110,7 +110,7 @@ var projectNext = function() {
   if (currentProject === arrProjects.length) {
     currentProject = 0;
   }
-  populateModal(currentProject);
+  populateModalProject(currentProject);
 };
 
 // Next project
@@ -119,7 +119,7 @@ var projectPrevious = function() {
   if (currentProject < 0) {
     currentProject = arrProjects.length - 1;
   }
-  populateModal(currentProject);
+  populateModalProject(currentProject);
 };
 
 /////////////////////////////////////////////////////////////////////////////
@@ -174,7 +174,7 @@ $('.project__image-container').on('click', function() {
   $('.overlay').show();
   $('.modal__container').show();
   var index = parseInt($(this).attr('data-project-index'));
-  populateModal(index);
+  populateModalProject(index);
   currentProject = index;
   currentSection = 'projects';
 });
