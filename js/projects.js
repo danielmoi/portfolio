@@ -2,7 +2,6 @@
 
 // Counters
 var currentSection = '';
-var indexCurrentProject = 0;
 var currentProject = 0;
 
 // Project Data
@@ -83,32 +82,15 @@ for (var i = 0; i < arrProjects.length; i++) {
 }
 
 
-// Element Selectors
-// $title = $('.project__title');
-// $description = $('.project__description');
-// $img = $('.project__image');
-// $a = $('.project__url');
-// $tech = $('.project__tech');
+var $modalTitle = $('.modal__title');
+var $modalDesc = $('.modal__description');
+var $modalImg = $('.modal__image');
+var $modalTools = $('.modal__tools');
+var $modalLink = $('.modal__link');
+var $modalURL = $('.modal_url');
 
-// Populate project with data
-// var populateProject = function(index) {
-//   var objCurrentProject = arrProjects[index];
-//   $title.text(objCurrentProject.name);
-//   $description.text(objCurrentProject.desc);
-//   $img.fadeOut(100, function() {
-//     $img.attr('src', objCurrentProject.img);
-//       $img.fadeIn(100);
-//   });
-//   $a.attr('href', objCurrentProject.url);
-//   $tech.text(objCurrentProject.tech);
-// };
-
-$modalTitle = $('.modal__title');
-$modalDesc = $('.modal__description');
-$modalImg = $('.modal__image');
-$modalTools = $('.modal__tools');
-$modalLink = $('.modal__link');
-$modalURL = $('.modal_url');
+var $arrowRight = $('.arrow-right');
+var $arrowLeft = $('.arrow-left');
 
 var populateModal = function(index) {
   var objCurrentProject = arrProjects[index];
@@ -139,6 +121,10 @@ var projectPrevious = function() {
   }
   populateModal(currentProject);
 };
+
+/////////////////////////////////////////////////////////////////////////////
+
+// MODAL and OVERLAY
 
 // Click modal
 $('.project__image-container').on('click', function() {
@@ -175,27 +161,33 @@ $('.modal__image').on('swipeleft', function() {
   projectPrevious();
 });
 
-var $arrowRight = $('.arrow-right');
-var $arrowLeft = $('.arrow-left');
-
 // Mouse in
-$('.project__image-container').on('mouseover', function() {
-  $(this).children().fadeIn(100);
-});
-
 $('.modal__image-container').on('mouseover', function() {
   $arrowRight.fadeIn();
   $arrowLeft.fadeIn();
 });
 
 // Mouse out
-$('.project__image-container').on('mouseleave', function() {
-  $(this).find('.project__image-info').fadeOut(100);
-});
 $('.modal__image-container').on('mouseleave', function() {
   $arrowRight.fadeOut();
   $arrowLeft.fadeOut();
 });
+
+/////////////////////////////////////////////////////////////////////////////
+
+// PROJECT GALLERY
+
+// Mouse in
+$('.project__image-container').on('mouseover', function() {
+  $(this).children().fadeIn(100);
+});
+
+// Mouse out
+$('.project__image-container').on('mouseleave', function() {
+  $(this).find('.project__image-info').fadeOut(100);
+});
+
+/////////////////////////////////////////////////////////////////////////////
 
 // Keyboard Events
 $(document).on('keydown', function(e) {
