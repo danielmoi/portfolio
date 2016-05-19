@@ -305,7 +305,7 @@ input[type=submit] {
   color: #00a5cd; }
 
 .project__url-container {
-  text-align: center; }
+  text-align: left; }
 
 .project__tech-container {
   font-weight: 900;
