@@ -126,19 +126,11 @@ var projectPrevious = function() {
 
 // MODAL and OVERLAY
 
-// Click modal
-$('.project__image-container').on('click', function() {
-  $('.overlay').show();
-  $('.modal__container').show();
-  var index = parseInt($(this).attr('data-project-index'));
-  populateModal(index);
-  currentProject = index;
-});
-
 // Click overlay
 $('.overlay').on('click', function() {
   $('.overlay').fadeOut(100);
   $('.modal__container').hide();
+  currentSection = '';
 });
 
 // Click Right
@@ -176,6 +168,16 @@ $('.modal__image-container').on('mouseleave', function() {
 /////////////////////////////////////////////////////////////////////////////
 
 // PROJECT GALLERY
+
+// Click image
+$('.project__image-container').on('click', function() {
+  $('.overlay').show();
+  $('.modal__container').show();
+  var index = parseInt($(this).attr('data-project-index'));
+  populateModal(index);
+  currentProject = index;
+  currentSection = 'projects';
+});
 
 // Mouse in
 $('.project__image-container').on('mouseover', function() {
