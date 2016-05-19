@@ -14,6 +14,8 @@ var wheel6 = $('#wheel-6');
 var wheel7 = $('#wheel-7');
 var wheel8 = $('#wheel-8');
 
+var $mhat = $('#monster-hat-magic');
+
 // Move monster 1
 var tlMove1 = new TimelineMax({
   onComplete: function() {
@@ -72,6 +74,7 @@ var tlMove4 = new TimelineMax({
   onComplete: function() {
     console.log('tlMove4 complete');
     tlWheelD.pause();
+    tlMoveHat.play();
   }
 });
 tlMove4.to($m4, 2, {
@@ -80,6 +83,18 @@ tlMove4.to($m4, 2, {
 });
 tlMove4.to($m4, 3, {
   x: 250,
+  ease: Power0.easeNone
+});
+
+// Move monster hat
+var tlMoveHat = new TimelineMax({
+  paused: true,
+  onComplete: function() {
+    console.log('tlMoveHat complete');
+  }
+});
+tlMoveHat.to($mhat, 2, {
+  y: 35,
   ease: Power0.easeNone
 });
 
