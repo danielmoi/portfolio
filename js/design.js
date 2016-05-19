@@ -73,6 +73,9 @@ for (var i = 0; i < arrDesign.length; i++) {
   arrImagesDesign.push($imgDesign);
   $div.append($imgDesign);
   $('.design__gallery').append($div);
-
-
 }
+
+$('.design__image').on('click', function() {
+  // $(this).parent().css('width', '100%');
+  console.log($(this).css('width'));
+});
