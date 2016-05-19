@@ -77,13 +77,37 @@ var arrProjects = [{
 }, {
   name: 'Sorter',
   img: 'img/sorter.jpg',
-  desc: 'An app for sorting and storing your web bookmarks, with custom categories, favourites, and a reading list.',
+  desc: 'An organisational app for sorting and storing your web bookmarks, with custom categories, favourites, and a reading list.',
   url: 'https://sorter-4000.herokuapp.com/',
   tech: 'Rails, Cloudinary, ChartJS'
+},{
+  name: 'BuddyUP',
+  img: 'img/buddy-up.png',
+  desc: 'A motivational app to support people achieving goals. Find a new friend to BuddyUP with and achieve your goals together.',
+  url: 'https://buddy-up.herokuapp.com/',
+  tech: 'Rails, Backbone, Stripe, Underscore, Cloudinary'
+},{
+  name: 'Catbus 3000',
+  img: 'img/catbus.png',
+  desc: 'A 2D game, reimagining the classic Pong / Breakout game. Inspired by the amazing Catbus from My Neighbor Totoro!',
+  url: 'http://danielmoi.github.io/ga-01-breakout/src',
+  tech: 'jQuery, Canvas'
+},{
+  name: 'Tic Tac Toe',
+  img: 'img/tic-tac-toe.png',
+  desc: 'The classic noughts and crosses game. Play against a friend or challenge the computer (with 3 levels of AI).',
+  url: 'http://danielmoi.github.io/ga-01-tic-tac-toe/src/',
+  tech: 'jQuery'
+},{
+  name: 'Cafe App',
+  img: 'img/cafe-app.png',
+  desc: 'An app to help you locate the nearest cafes for any location in the world! View each cafe\'s rating and image from FourSquare.',
+  url: 'http://danielmoi.github.io/ga-01-breakout/src',
+  tech: 'Knockout, Google Maps, FourSquare API, jQuery'
 }, {
   name: 'Nadine Claire Events',
   img: 'img/nadine-claire-events.jpg',
-  desc: 'Website for Nadine Claire Events, a boutique event management company in Sydney.',
+  desc: 'Business website for Nadine Claire Events, a boutique event management company in Sydney, as part of a project encompassing brand identity, style guide, and logo design.',
   url: 'http://nadineclaireevents.com/',
   tech: 'Wordpress, HTML5, CSS3'
 }];
@@ -120,8 +144,6 @@ var populateProject = function(index) {
     $img.attr('src', objCurrentProject.img);
       $img.fadeIn(100);
   });
-  // console.log(objCurrentProject.img);
-  // console.log($img.attr('src'));
   $a.attr('href', objCurrentProject.url);
   $tech.text(objCurrentProject.tech);
 };
