@@ -269,6 +269,9 @@ input[type=submit] {
   width: auto;
   position: relative; }
 
+.modal__image {
+  max-height: 100%; }
+
 .modal__title {
   text-transform: uppercase;
   font-weight: 900; }
