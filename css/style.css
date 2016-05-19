@@ -367,6 +367,8 @@ input[type=submit] {
   width: 50%;
   display: inline-block;
   cursor: pointer; }
+  .project__image-container:hover {
+    background: #000; }
 
 .project__image-container:before {
   content: '';
@@ -383,6 +385,21 @@ input[type=submit] {
   opacity: 0.95; }
   .project__image:hover {
     opacity: 1; }
+
+.project__image-info {
+  display: none;
+  height: 20%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1em;
+  margin: 0.5em;
+  color: #00a5cd;
+  font-weight: 900;
+  text-align: center;
+  text-transform: uppercase;
+  background: #gray; }
 
 .design__image-container {
   position: relative;

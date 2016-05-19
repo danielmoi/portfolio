@@ -9,6 +9,9 @@
   @media screen and (min-width: 800px) {
     // width: 25%;
   }
+  &:hover {
+    background: #000;
+  }
 }
 
 .project__image-container:before {
@@ -28,4 +31,20 @@
   &:hover {
     opacity: 1;
   }
+}
+
+.project__image-info {
+  display: none;
+  height: 20%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1em;
+  margin: 0.5em;
+  color: $primary;
+  font-weight: 900;
+  text-align: center;
+  text-transform: uppercase;
+  background: #gray;
 }

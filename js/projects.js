@@ -68,6 +68,9 @@ var arrImagesProjects = [];
 for (var i = 0; i < arrProjects.length; i++) {
   var $divProject = $('<div>');
   $divProject.addClass('project__image-container');
+  var $divInfo = $('<div>').addClass('project__image-info');
+  $divInfo.text(arrProjects[i].name);
+  $divProject.append($divInfo);
   var $imgProject = $('<img>');
   $imgProject.addClass('project__image');
   $imgProject.attr('src', arrProjects[i].img);
@@ -142,12 +145,19 @@ var $arrowRight = $('.arrow-right');
 var $arrowLeft = $('.arrow-left');
 
 // Mouse in
+$('.project__image-container').on('mouseover', function() {
+  $(this).children().fadeIn(100);
+})
+
 $('.project__container').on('mouseover', function() {
   $arrowRight.fadeIn();
   $arrowLeft.fadeIn();
 });
 
 // Mouse out
+$('.project__image-container').on('mouseleave', function() {
+  $(this).find('.project__image-info').fadeOut(100);
+})
 $('.project__container').on('mouseleave', function() {
   $arrowRight.fadeOut();
   $arrowLeft.fadeOut();
