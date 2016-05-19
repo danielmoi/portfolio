@@ -48,6 +48,10 @@
 .about__details {
   font-style: italic;
 }
+
+.code__container {
+  margin: 2em 0;
+}
 .project__container {
   position: relative;
   margin: 2em 0;
@@ -112,7 +116,7 @@
 }
 
 .bottom__container {
-  margin-bottom: 50%;
+  margin-bottom: 25%;
   color: $primary;
   text-align: center;
 }
