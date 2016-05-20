@@ -267,7 +267,8 @@ input[type=submit] {
   margin: auto;
   height: 70%;
   width: auto;
-  position: relative; }
+  position: relative;
+  cursor: pointer; }
 
 .modal__image {
   max-height: 100%; }

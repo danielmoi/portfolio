@@ -175,14 +175,18 @@ $('.modal__image').on('swipeleft', function() {
 });
 
 // Mouse in
-$('.modal__image-container').on('mouseover', function() {
+$('.modal__overlay--right').on('mouseover', function() {
   $arrowRight.fadeIn();
+});
+$('.modal__overlay--left').on('mouseover', function() {
   $arrowLeft.fadeIn();
 });
 
 // Mouse out
-$('.modal__image-container').on('mouseleave', function() {
+$('.modal__overlay--right').on('mouseleave', function() {
   $arrowRight.fadeOut();
+});
+$('.modal__overlay--left').on('mouseleave', function() {
   $arrowLeft.fadeOut();
 });
 
