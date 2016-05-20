@@ -6,10 +6,6 @@
 $('.nav__list-item').on('vclick', function(e) {
   $('.nav__list-item').removeClass('nav__active');
   $(this).addClass('nav__active');
-  var section = $($(this).children()[0]).attr('data-section');
-  currentSection = section;
-  // $('.main__container').fadeOut(200).delay(200);
-  // $('#' + section).fadeIn(300);
 });
 
 $('.nav__toggle').on('vclick', function(e) {
