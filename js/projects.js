@@ -229,6 +229,11 @@ var showProjects = function () {
 showProjects();
 
 $('.projects__more').on('click', function(){
+  if (visibleProjectCount >= arrProjects.length) {
+    console.log('no more projects');
+    $('.projects__more').text("That's it for now!");
+    return;
+  }
   console.log('more projects');
   visibleProjectCount += incrementProjects;
   showProjects(visibleProjectCount);
