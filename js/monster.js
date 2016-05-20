@@ -93,9 +93,11 @@ var tlMoveHat = new TimelineMax({
     console.log('tlMoveHat complete');
   }
 });
-tlMoveHat.to($mhat, 2, {
+tlMoveHat.to($mhat, 0.5, {
   y: 35,
-  ease: Power0.easeNone
+  rotation: 720,
+  transformOrigin: '50% 50%',
+  ease: Power2.easeInOut
 });
 
 // Move first pair of wheels
