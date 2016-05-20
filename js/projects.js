@@ -221,14 +221,27 @@ $(document).on('keydown', function(e) {
     $('.modal__container').hide();
   }
 
-  if (currentSection !== 'projects') {
+  if (currentSection === 'projects') {
+    // Right Arrow
+    if (e.which === 39) {
+      projectNext();
+    }
+    // Left arrow
+    else if (e.which === 37) {
+      projectPrevious();
+    }
     return;
   }
-  // Right Arrow
-  if (e.which === 39) {
-    projectNext();
+
+  if (currentSection === 'design') {
+    // Right arrow
+    if (e.which === 39) {
+      designNext();
+    }
+    // Left arrow
+    else if (e.which === 37) {
+      designPrevious();
+    }
   }
-  if (e.which === 37) {
-    projectPrevious();
-  }
+
 });
