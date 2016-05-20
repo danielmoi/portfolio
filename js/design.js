@@ -66,22 +66,23 @@ var arrImagesDesign = [];
 for (var i = 0; i < arrDesign.length; i++) {
   var $divDesign = $('<div>');
   $divDesign.addClass('design__image-container');
-  $divDesign.attr('data-project-index', i);
+  $divDesign.attr('data-design-index', i);
 
   var $imgDesign = $('<img>');
   $imgDesign.addClass('design__image');
   $imgDesign.attr('src', 'img/' + arrDesign[i]);
   arrImagesDesign.push($imgDesign);
   $divDesign.append($imgDesign);
+  $divDesign.hide();
   $('.design__gallery').append($divDesign);
 }
 
 $('.design__image-container').on('click', function() {
   // $(this).parent().css('width', '100%');
-  console.log($(this).attr('data-project-index'));
+  console.log($(this).attr('data-design-index'));
   $('.overlay').show();
   $('.modal__container').show();
-  var index = parseInt($(this).attr('data-project-index'));
+  var index = parseInt($(this).attr('data-design-index'));
   populateModalDesign(index);
   currentSection = 'design';
   currentDesign = index;
@@ -107,3 +108,27 @@ var designPrevious = function() {
   }
   populateModalDesign(currentDesign);
 };
+
+
+// Design Gallery
+var visibleDesignCount = 4;
+var incrementDesigns = 4;
+
+var showDesigns = function () {
+  var start = visibleDesignCount - incrementDesigns;
+  for (var i = start; i < visibleDesignCount; i++) {
+    $('[data-design-index=' + i + ']').show();
+  }
+};
+showDesigns();
+
+$('.designs__more').on('click', function(){
+  if (visibleDesignCount >= arrDesign.length) {
+    console.log('no more designs');
+    $('.designs__more').text("That's it for now!");
+    return;
+  }
+  console.log('more designs');
+  visibleDesignCount += incrementDesigns;
+  showDesigns(visibleDesignCount);
+});
