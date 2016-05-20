@@ -78,9 +78,12 @@ for (var i = 0; i < arrProjects.length; i++) {
   $imgProject.attr('src', arrProjects[i].img);
   arrImagesProjects.push($imgProject);
   $divProject.append($imgProject);
+  $divProject.hide();
   $('.project__gallery').append($divProject);
 
 }
+
+
 
 
 var $modalTitle = $('.modal__title');
@@ -212,6 +215,23 @@ $('.project__image-container').on('mouseover', function() {
 // Mouse out
 $('.project__image-container').on('mouseleave', function() {
   $(this).find('.project__image-info').fadeOut(100);
+});
+
+var visibleProjectCount = 2;
+var incrementProjects = 2;
+
+var showProjects = function () {
+  var start = visibleProjectCount - incrementProjects;
+  for (var i = start; i < visibleProjectCount; i++) {
+    $('[data-project-index=' + i + ']').show();
+  }
+};
+showProjects();
+
+$('.projects__more').on('click', function(){
+  console.log('more projects');
+  visibleProjectCount += incrementProjects;
+  showProjects(visibleProjectCount);
 });
 
 /////////////////////////////////////////////////////////////////////////////
