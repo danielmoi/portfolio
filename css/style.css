@@ -209,20 +209,15 @@ input[type=submit] {
       border-top: none;
       border-bottom: 1px solid #00a5cd; } }
 
-.nav__list {
+.nav__list li {
+  display: block;
   line-height: 40px; }
+  @media screen and (min-width: 800px) {
+    .nav__list li {
+      display: inline; } }
 
 .nav__active {
   color: #00a5cd; }
-
-.nav__list-item a {
-  display: block;
-  padding: 1em 0;
-  font-size: 1em; }
-  @media screen and (min-width: 800px) {
-    .nav__list-item a {
-      display: inline;
-      padding: 0 2em 0 0; } }
 
 .nav__list-item {
   display: block;
