@@ -310,20 +310,6 @@ input[type=submit] {
 .project__tech {
   font-weight: normal; }
 
-.arrow-right {
-  display: none;
-  position: absolute;
-  width: 40px;
-  right: 1em;
-  top: 50%; }
-
-.arrow-left {
-  display: none;
-  position: absolute;
-  width: 40px;
-  left: 1em;
-  top: 50%; }
-
 .design__container {
   margin: 2em 0; }
 
@@ -393,7 +379,8 @@ input[type=submit] {
   height: 70%;
   width: auto;
   position: relative;
-  cursor: pointer; }
+  cursor: pointer;
+  padding: 0 1rem; }
 
 .modal__image {
   max-height: 100%; }
@@ -433,6 +420,20 @@ input[type=submit] {
       width: 2rem;
       top: 1rem;
       right: 1rem; } }
+
+.arrow-right {
+  display: none;
+  position: absolute;
+  width: 1rem;
+  right: -1em;
+  top: 50%; }
+
+.arrow-left {
+  display: none;
+  position: absolute;
+  width: 1rem;
+  left: -1em;
+  top: 50%; }
 
 .project__image-container {
   position: relative;

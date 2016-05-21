@@ -186,18 +186,14 @@ $('.modal__image').on('swipeleft', function() {
 });
 
 // Mouse in
-$('.modal__overlay--right').on('mouseover', function() {
+$('.modal__image-container').on('mouseover', function() {
   $arrowRight.fadeIn();
-});
-$('.modal__overlay--left').on('mouseover', function() {
   $arrowLeft.fadeIn();
 });
 
 // Mouse out
-$('.modal__overlay--right').on('mouseleave', function() {
+$('.modal__image-container').on('mouseleave', function() {
   $arrowRight.fadeOut();
-});
-$('.modal__overlay--left').on('mouseleave', function() {
   $arrowLeft.fadeOut();
 });
 
