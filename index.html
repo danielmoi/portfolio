@@ -581,7 +581,22 @@
     <h2 class="main__title">My contact details:</h2>
     <h3 class="main__subtitle contact__subtitle">Email</h3>
     <p>
-      Drop me a line at: <a class="contact__details" href="mailto:daniel@ampersandmoi.com">daniel@ampersandmoi.com</a>
+      Drop me a line at: 
+
+      <script>
+        var dm1 = "daniel";
+        var dm2 = "ampersandmoi";
+        var dm3 = '.';
+        var dm4 = 'com';
+        var dmFull = dm1 + "@" + dm2 + dm3 + dm4;
+        var dmH1 = ['h', 'r', 'e', 'f'];
+        var dmH2 = dmH1.join('');
+        var dmS1 = ['S', 'u', 'b', 'j', 'e', 'c', 't'];
+        var dmS2 = dmS1.join('');
+        document.write('<a ' + 'class="contact__details"'+ dmH2 + '=' + "mail" + "to:" + dmFull + '?' + dmS2 + '=Hello%20from%20...' + "'>" + dmFull + "</a>");
+      </script>
+
+
     </p>
 
     <h3 class="main__subtitle contact__subtitle">LinkedIn</h3>
