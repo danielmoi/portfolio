@@ -10,6 +10,7 @@ $('.nav__list-item').on('vclick', function(e) {
 
 $('.nav__toggle').on('vclick', function(e) {
   $('.nav').toggle();
+  console.log('nav toggle clicked');
 });
 
 $('.nav__list-item').on('vclick', function(e) {

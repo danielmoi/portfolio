@@ -166,7 +166,7 @@ $('.modal__overlay--left').on('vclick', function() {
 });
 
 // Swipe Right
-$('.modal__image').on('swiperight', function() {
+$('.modal__image-container').on('swiperight', function() {
   if (currentSection === 'projects') {
     projectNext();
   }
@@ -176,7 +176,7 @@ $('.modal__image').on('swiperight', function() {
 });
 
 // Swipe Left
-$('.modal__image').on('swipeleft', function() {
+$('.modal__image-container').on('swipeleft', function() {
   if (currentSection === 'projects') {
     projectPrevious();
   }
