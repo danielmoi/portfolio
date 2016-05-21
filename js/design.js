@@ -77,6 +77,8 @@ for (var i = 0; i < arrDesign.length; i++) {
   $('.design__gallery').append($divDesign);
 }
 
+
+
 $('.design__image-container').on('vclick', function() {
   // $(this).parent().css('width', '100%');
   console.log($(this).attr('data-design-index'));
@@ -132,3 +134,10 @@ $('.designs__more').on('vclick', function(){
   visibleDesignCount += incrementDesigns;
   showDesigns(visibleDesignCount);
 });
+
+var preloadDesignImages = function() {
+  var start = visibleDesignCount - incrementDesigns;
+  for (var i = start; i < visibleDesignCount; i++) {
+    $('[data-design-index=]' + i + ']').attr('src', 'img/' + arrDesign[i]);
+  }
+};
