@@ -126,17 +126,25 @@ var projectPrevious = function() {
   populateModalProject(currentProject);
 };
 
+var modalClose = function() {
+  $('.overlay').fadeOut(100);
+  $('.modal__container').hide();
+  currentSection = '';
+};
+
 /////////////////////////////////////////////////////////////////////////////
 
 // MODAL and OVERLAY
 
 // Click overlay
 $('.overlay').on('click', function() {
-  $('.overlay').fadeOut(100);
-  $('.modal__container').hide();
-  currentSection = '';
+  modalClose();
 });
 
+// Click close
+$('.modal__close').on('click', function() {
+  modalClose();
+});
 // Click Right
 $('.modal__overlay--right').on('vclick', function() {
   if (currentSection === 'projects') {
