@@ -18,6 +18,7 @@ var $mhat = $('#monster-hat-magic');
 
 // Move monster 1
 var tlMove1 = new TimelineMax({
+  paused: true,
   onComplete: function() {
     console.log('tlMove1 complete');
     tlWheelA.pause();
@@ -91,6 +92,7 @@ var tlMoveHat = new TimelineMax({
   paused: true,
   onComplete: function() {
     console.log('tlMoveHat complete');
+    $('.btn-zolt').text('Zolt, again, s\'il vous plait!');
   }
 });
 tlMoveHat.to($mhat, 0.5, {
@@ -101,7 +103,7 @@ tlMoveHat.to($mhat, 0.5, {
 });
 
 // Move first pair of wheels
-var tlWheelA = new TimelineMax();
+var tlWheelA = new TimelineMax({ paused: true });
 tlWheelA.to([wheel1, wheel2], 1, {
   rotation: -360,
   transformOrigin: '50% 50%',
@@ -134,4 +136,9 @@ tlWheelD.to([wheel7, wheel8], 1, {
   transformOrigin: '50% 50%',
   repeat: -1,
   ease: Linear.easeNone
+});
+
+$('.btn-zolt').on('click', function() {
+  tlMove1.play(0);
+  tlWheelA.play(0);
 });
