@@ -137,12 +137,12 @@ var modalClose = function() {
 // MODAL and OVERLAY
 
 // Click overlay
-$('.overlay').on('click', function() {
+$('.overlay').on('vclick', function() {
   modalClose();
 });
 
 // Click close
-$('.modal__close').on('click', function() {
+$('.modal__close').on('vclick', function() {
   modalClose();
 });
 // Click Right
@@ -206,7 +206,7 @@ $('.modal__overlay--left').on('mouseleave', function() {
 // PROJECT GALLERY
 
 // Click image
-$('.project__image-container').on('click', function() {
+$('.project__image-container').on('vclick', function() {
   $('.overlay').show();
   $('.modal__container').show();
   var index = parseInt($(this).attr('data-project-index'));
@@ -236,7 +236,7 @@ var showProjects = function () {
 };
 showProjects();
 
-$('.projects__more').on('click', function(){
+$('.projects__more').on('vclick', function(){
   if (visibleProjectCount >= arrProjects.length) {
     console.log('no more projects');
     $('.projects__more').text("That's it for now!");

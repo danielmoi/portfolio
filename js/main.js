@@ -50,6 +50,6 @@ tlMove.to($butterfly, 5, {
 
 
 
-$(document).on('click', function() {
+$(document).on('vclick', function() {
   tlRotate.pause();
 });

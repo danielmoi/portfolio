@@ -77,7 +77,7 @@ for (var i = 0; i < arrDesign.length; i++) {
   $('.design__gallery').append($divDesign);
 }
 
-$('.design__image-container').on('click', function() {
+$('.design__image-container').on('vclick', function() {
   // $(this).parent().css('width', '100%');
   console.log($(this).attr('data-design-index'));
   $('.overlay').show();
@@ -122,7 +122,7 @@ var showDesigns = function () {
 };
 showDesigns();
 
-$('.designs__more').on('click', function(){
+$('.designs__more').on('vclick', function(){
   if (visibleDesignCount >= arrDesign.length) {
     console.log('no more designs');
     $('.designs__more').text("That's it for now!");
