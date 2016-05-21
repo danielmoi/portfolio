@@ -24,32 +24,25 @@ $('.nav__list-item').on('vclick', function(e) {
 var $butterfly = $('.butterfly-small');
 
 
-var tlRotate = new TimelineLite({
+var tlBflyRotate = new TimelineLite({
   // paused: true
 });
 // tlButterfly.to($butterfly, 3, { x: -100 });
 
-tlRotate.to($butterfly, 0.2, {
+tlBflyRotate.to($butterfly, 0.2, {
   rotation: 15,
   transformOrigin: '50% 50%',
   ease: Power0.easeIn,
   yoyo: true,
   repeat: -1
 });
-var magic = function() {
-  console.log('hello');
-  // $butterfly.remove();
-};
 
-var tlMove = new TimelineLite();
-tlMove.to($butterfly, 5, {
+var tlMove0 = new TimelineLite();
+tlMove0.to($butterfly, 5, {
   left: '50%',
   top: '-1px',
-  onComplete: magic
+  onComplete: function() {
+    tlBflyRotate.pause();
+    console.log('tlMove0 complete');
+  }
 }, 2);
-
-
-
-$(document).on('vclick', function() {
-  tlRotate.pause();
-});

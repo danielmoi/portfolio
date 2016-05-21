@@ -15,6 +15,7 @@ var wheel7 = $('#wheel-7');
 var wheel8 = $('#wheel-8');
 
 var $mhat = $('#monster-hat-magic');
+var $bfly = $('#butterfly-1');
 
 // Move monster 1
 var tlMove1 = new TimelineMax({
@@ -76,6 +77,7 @@ var tlMove4 = new TimelineMax({
     console.log('tlMove4 complete');
     tlWheelD.pause();
     tlMoveHat.play();
+
   }
 });
 tlMove4.to($m4, 2, {
@@ -92,7 +94,7 @@ var tlMoveHat = new TimelineMax({
   paused: true,
   onComplete: function() {
     console.log('tlMoveHat complete');
-    $('.btn-zolt').text('Zolt, again, s\'il vous plait!');
+    tlBfly.play();
   }
 });
 tlMoveHat.to($mhat, 0.5, {
@@ -138,6 +140,21 @@ tlWheelD.to([wheel7, wheel8], 1, {
   ease: Linear.easeNone
 });
 
+// Move butterfly
+var tlBfly = new TimelineMax({
+  paused: true,
+  onComplete: function() {
+    console.log('tlBfly complete');
+    $('.btn-zolt').text('Zolt, again, s\'il vous plait!');
+  }
+});
+tlBfly.to($bfly, 1, {
+  x: 202,
+  y: 82,
+  ease: Linear.easeNone
+});
+
+// Let's go!
 $('.btn-zolt').on('click', function() {
   tlMove1.play(0);
   tlWheelA.play(0);
