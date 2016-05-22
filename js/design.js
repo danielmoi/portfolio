@@ -93,6 +93,10 @@ $('.design__image-container').on('vclick', function() {
 var populateModalDesign = function(index) {
   var img = arrDesign[index];
   $modalImg.attr('src', 'img/' + img);
+  $modalTitle.text('');
+  $modalDesc.text('');
+  $modalTools.text('');
+  $modalLink.text('');
 };
 
 var designNext = function() {
