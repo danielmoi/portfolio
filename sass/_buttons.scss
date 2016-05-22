@@ -16,4 +16,17 @@
 .btn-container {
   margin: 2em 0;
   text-align: center;
+  position: relative;
+}
+
+.btn-zolt {
+  background: $primary;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  border: 3px solid white;
+  &:disabled {
+    background: $gray;
+    border-color: $gray;
+  }
 }

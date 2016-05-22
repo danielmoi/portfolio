@@ -82,7 +82,8 @@ var tlM2Down = new TimelineMax({
     console.log('tlM2Down complete');
     tlM2Wobble.pause();
 
-    tlM2Right.restart();
+    // tlM2Right.restart();
+    tlM2Right.play(0);
   }
 });
 tlM2Down.to($m2, 2, {
@@ -95,6 +96,9 @@ var tlM2Right = new TimelineMax({
   onComplete: function() {
     console.log('tlM2Right complete');
     tlWheelB.pause();
+    tlM2Right.pause(0);
+    tlM2Down.pause(0);
+
 
     tlB2Bounce.restart();
     tlD2Move.restart();
@@ -189,6 +193,8 @@ var tlM3Left = new TimelineMax({
   onComplete: function() {
     console.log('tlM3Left complete');
     tlWheelC.pause();
+    tlM3Down.pause(0);
+    tlM3Left.pause(0);
 
     tlWheelD.restart();
     tlB3Bounce.restart();
@@ -283,6 +289,7 @@ var tlMoveHat = new TimelineMax({
   paused: true,
   onComplete: function() {
     console.log('tlMoveHat complete');
+    $('.btn-zolt').prop('disabled', false);
 
     tlBfly.restart();
   }
@@ -343,7 +350,6 @@ var tlBfly = new TimelineMax({
   paused: true,
   onComplete: function() {
     console.log('tlBfly complete');
-    $('.btn-zolt').text('Zolt, again, s\'il vous plait!');
   }
 });
 tlBfly.to($bfly, 1, {
@@ -354,6 +360,12 @@ tlBfly.to($bfly, 1, {
 
 // Let's go!
 $('.btn-zolt').on('click', function() {
+  $(this).prop('disabled', true);
+  tlM1Left.pause(0);
+  tlM4Right.pause(0);
+  tlBfly.pause(0);
+  tlMoveHat.pause(0);
+  tlM4Down.pause(0);
   tlM1Left.restart();
   tlWheelA.restart();
 });

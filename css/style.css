@@ -119,7 +119,18 @@ a {
 
 .btn-container {
   margin: 2em 0;
-  text-align: center; }
+  text-align: center;
+  position: relative; }
+
+.btn-zolt {
+  background: #00a5cd;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  border: 3px solid white; }
+  .btn-zolt:disabled {
+    background: #323232;
+    border-color: #323232; }
 
 fieldset {
   border: none;
@@ -509,9 +520,3 @@ input[type=submit] {
   opacity: 0.95; }
   .design__image:hover {
     opacity: 1; }
-
-#Layer_1 {
-  position: relative; }
-
-#monster {
-  position: absolute; }
