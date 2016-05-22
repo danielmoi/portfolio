@@ -20,25 +20,25 @@ var arrProjects = [{
   tech: 'Rails, Cloudinary, ChartJS'
 },{
   name: 'BuddyUP',
-  img: 'img/buddy-up.png',
+  img: 'img/buddy-up.jpg',
   desc: 'A motivational app to support people achieving goals. Find a new friend to BuddyUP with and achieve your goals together.',
   url: 'https://buddy-up.herokuapp.com/',
   tech: 'Rails, Backbone, Stripe, Underscore, Cloudinary'
 },{
   name: 'Catbus 3000',
-  img: 'img/catbus.png',
+  img: 'img/catbus.jpg',
   desc: 'A 2D game, reimagining the classic Pong / Breakout game. Inspired by the amazing Catbus from My Neighbor Totoro!',
   url: 'http://danielmoi.github.io/ga-01-breakout/src',
   tech: 'jQuery, Canvas'
 },{
   name: 'Tic Tac Toe',
-  img: 'img/tic-tac-toe.png',
+  img: 'img/tic-tac-toe.jpg',
   desc: 'The classic noughts and crosses game. Play against a friend or challenge the computer (with 3 levels of AI).',
   url: 'http://danielmoi.github.io/ga-01-tic-tac-toe/src/',
   tech: 'jQuery'
 },{
   name: 'Cafe App',
-  img: 'img/cafe-app.png',
+  img: 'img/cafe-app.jpg',
   desc: 'An app to help you locate the nearest cafes for any location in the world! View each cafe\'s rating and image from FourSquare.',
   url: 'http://danielmoi.github.io/ga-01-breakout/src',
   tech: 'Knockout, Google Maps, FourSquare API, jQuery'
