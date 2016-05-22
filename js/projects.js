@@ -29,7 +29,7 @@ var arrProjects = [{
   img: 'img/catbus.jpg',
   desc: 'A 2D game, reimagining the classic Pong / Breakout game. Inspired by the amazing Catbus from My Neighbor Totoro!',
   url: 'http://danielmoi.github.io/ga-01-breakout/src',
-  tech: 'jQuery, Canvas'
+  tech: 'jQuery, Canvas, Firebase'
 },{
   name: 'Tic Tac Toe',
   img: 'img/tic-tac-toe.jpg',
