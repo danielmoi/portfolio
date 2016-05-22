@@ -70,7 +70,8 @@ for (var i = 0; i < arrDesign.length; i++) {
 
   var $imgDesign = $('<img>');
   $imgDesign.addClass('design__image');
-  $imgDesign.attr('src', 'img/' + arrDesign[i]);
+  $imgDesign.attr('data-design-index', i);
+  // $imgDesign.attr('src', 'img/' + arrDesign[i]);
   arrImagesDesign.push($imgDesign);
   $divDesign.append($imgDesign);
   $divDesign.hide();
@@ -80,7 +81,6 @@ for (var i = 0; i < arrDesign.length; i++) {
 
 
 $('.design__image-container').on('vclick', function() {
-  // $(this).parent().css('width', '100%');
   console.log($(this).attr('data-design-index'));
   $('.overlay').show();
   $('.modal__container').show();
@@ -116,13 +116,14 @@ var designPrevious = function() {
 var visibleDesignCount = 4;
 var incrementDesigns = 4;
 
-var showDesigns = function () {
+var showMoreDesigns = function () {
   var start = visibleDesignCount - incrementDesigns;
   for (var i = start; i < visibleDesignCount; i++) {
+    $('.design__image[data-design-index=' + i + ']').attr('src', 'img/' + arrDesign[i]);
     $('[data-design-index=' + i + ']').show();
   }
 };
-showDesigns();
+showMoreDesigns();
 
 $('.designs__more').on('vclick', function(){
   if (visibleDesignCount >= arrDesign.length) {
@@ -132,12 +133,5 @@ $('.designs__more').on('vclick', function(){
   }
   console.log('more designs');
   visibleDesignCount += incrementDesigns;
-  showDesigns(visibleDesignCount);
+  showMoreDesigns();
 });
-
-var preloadDesignImages = function() {
-  var start = visibleDesignCount - incrementDesigns;
-  for (var i = start; i < visibleDesignCount; i++) {
-    $('[data-design-index=]' + i + ']').attr('src', 'img/' + arrDesign[i]);
-  }
-};
