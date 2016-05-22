@@ -18,7 +18,13 @@ var $mhat = $('#monster-hat-magic');
 var $bfly = $('#butterfly-1');
 
 var $box1 = $('#box-1');
+var $box2 = $('#box-2');
+var $box3 = $('#box-3');
+var $box4 = $('#box-4');
+
 var $dial1 = $('#dial-1');
+var $dial2 = $('#dial-2');
+var $dial3 = $('#dial-3');
 
 // Move monster 1
 var tlM1Left = new TimelineMax({
@@ -27,14 +33,12 @@ var tlM1Left = new TimelineMax({
     console.log('tlM1Left complete');
     tlWheelA.pause();
 
-    tlM2Down.restart();
-    tlM2Wobble.restart();
     tlWheelB.restart();
     tlB1Bounce.restart();
     tlD1Move.restart();
   }
 });
-tlM1Left.fromTo($m1, 3, {}, {
+tlM1Left.to($m1, 3, {
   x: -250,
   ease: Power0.easeNone
 });
@@ -43,6 +47,8 @@ var tlB1Bounce = new TimelineMax({
   paused: true,
   onComplete: function() {
     console.log('tlB1Bounce complete');
+    tlM2Down.restart();
+    tlM2Wobble.restart();
   }
 });
 tlB1Bounce.to($box1, 0.2, {
@@ -79,10 +85,7 @@ var tlM2Down = new TimelineMax({
     tlM2Right.restart();
   }
 });
-tlM2Down.fromTo($m2, 2, {
-  x: 0,
-  y: 0
-}, {
+tlM2Down.to($m2, 2, {
   y: 151,
   ease: Power0.easeNone
 });
@@ -93,14 +96,17 @@ var tlM2Right = new TimelineMax({
     console.log('tlM2Right complete');
     tlWheelB.pause();
 
-    tlM3Down.restart();
-    tlM3Wobble.restart();
+    tlB2Bounce.restart();
+    tlD2Move.restart();
     tlWheelC.restart();
   }
 });
-tlM2Right.fromTo($m2, 3, {
-  x: 0
-}, {
+tlM2Right
+.to($m2, 0, {
+  rotation: 0,
+  transformOrigin: '50% 50%'
+})
+.to($m2, 3, {
   x: 250,
   ease: Power0.easeNone
 });
@@ -116,6 +122,36 @@ tlM2Wobble.fromTo($m2, 0.1, {
   transformOrigin: '50% 50%',
   yoyo: true,
   repeat: -1
+});
+
+var tlB2Bounce = new TimelineMax({
+  paused: true,
+  onComplete: function() {
+    console.log('tlB2Bounce complete');
+    tlM3Down.restart();
+    tlM3Wobble.restart();
+  }
+});
+tlB2Bounce.to($box2, 0.2, {
+  y: -5,
+  yoyo: true,
+  repeat: 5,
+  ease: Linear.easeNone
+});
+
+var tlD2Move = new TimelineMax({
+  paused: true,
+  onComplete: function() {
+    console.log('tlD2Move complete');
+  }
+});
+tlD2Move.fromTo($dial2, 0.2, {
+  transformOrigin: '100% 100%',
+  rotation: 0,
+}, {
+  transformOrigin: '100% 100%',
+  rotation: 60,
+  repeat: 5
 });
 
 /////////////////////////////////////////////////////////////////////////////
@@ -143,9 +179,7 @@ var tlM3Down = new TimelineMax({
     tlM3Left.restart();
   }
 });
-tlM3Down.fromTo($m3, 2, {
-  y: 0
-}, {
+tlM3Down.to($m3, 2, {
   y: 195,
   ease: Power0.easeNone
 });
@@ -157,8 +191,8 @@ var tlM3Left = new TimelineMax({
     tlWheelC.pause();
 
     tlWheelD.restart();
-    tlM4Down.restart();
-    tlM4Wobble.restart();
+    tlB3Bounce.restart();
+    tlD3Move.restart();
   }
 });
 tlM3Left.to($m3, 3, {
@@ -166,6 +200,35 @@ tlM3Left.to($m3, 3, {
   ease: Power0.easeNone
 });
 
+var tlB3Bounce = new TimelineMax({
+  paused: true,
+  onComplete: function() {
+    console.log('tlB3Bounce complete');
+    tlM4Down.restart();
+    tlM4Wobble.restart();
+  }
+});
+tlB3Bounce.to($box3, 0.2, {
+  y: -5,
+  yoyo: true,
+  repeat: 5,
+  ease: Linear.easeNone
+});
+
+var tlD3Move = new TimelineMax({
+  paused: true,
+  onComplete: function() {
+    console.log('tlD3Move complete');
+  }
+});
+tlD3Move.fromTo($dial3, 0.2, {
+  transformOrigin: '0% 100%',
+  rotation: 0,
+}, {
+  transformOrigin: '0% 100%',
+  rotation: -60,
+  repeat: 5
+});
 /////////////////////////////////////////////////////////////////////////////
 // Move monster 4
 
@@ -191,7 +254,7 @@ var tlM4Down = new TimelineMax({
     tlM4Right.restart();
   }
 });
-tlM4Down.fromTo($m4, 2, {}, {
+tlM4Down.to($m4, 2, {
   y: 146,
   ease: Power0.easeNone
 });
@@ -205,9 +268,14 @@ var tlM4Right = new TimelineMax({
     tlMoveHat.restart();
   }
 });
-tlM4Right.to($m4, 3, {
+tlM4Right
+.to($m4, 3, {
   x: 250,
   ease: Power0.easeNone
+})
+.to($m4, 0, {
+  rotation: 0,
+  transformOrigin: '50% 50%'
 });
 
 // Move monster hat
