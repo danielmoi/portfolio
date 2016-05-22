@@ -2,6 +2,8 @@
 
 // NAV BAR
 
+var navOpen = false;
+
 // Nav Event Handlers
 $('.nav__list-item').on('vclick', function(e) {
   $('.nav__list-item').removeClass('nav__active');
@@ -9,14 +11,31 @@ $('.nav__list-item').on('vclick', function(e) {
 });
 
 $('.nav__list-item').on('click', function(e) {
+  // e.stopPropagation();
   if ($('.nav__list-item').css('display') === 'block') {
     $('.nav').hide();
+    navOpen = false;
+    $('.nav__toggle').text('+');
   }
 });
 
 $('.nav__toggle').on('vclick', function(e) {
-  $('.nav').toggle();
+  if (navOpen) {
+    $('.nav').hide();
+    $('.nav__toggle').text('+');
+    navOpen = false;
+    return;
+  }
+  $('.nav').show();
+  navOpen = true;
+  $('.nav__toggle').text('–');
+  // $('.nav').toggle();
+  // e.stopPropagation();
 });
+
+// $(document).on('vclick', function() {
+//   $('.nav').hide();
+// });
 
 var $btnZolt = $('.btn-zolt');
 
