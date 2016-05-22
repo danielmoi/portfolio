@@ -103,6 +103,7 @@ var populateModalProject = function(index) {
   $modalImg.attr('src', objCurrentProject.img);
   $modalTools.text('Tools: ' + objCurrentProject.tech);
   $modalLink.attr('href', objCurrentProject.url);
+  $modalLink.attr('target', '_blank');
   $modalLink.text('Check it out here');
 
 };
