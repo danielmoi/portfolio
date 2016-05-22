@@ -17,74 +17,195 @@ var wheel8 = $('#wheel-8');
 var $mhat = $('#monster-hat-magic');
 var $bfly = $('#butterfly-1');
 
+var $box1 = $('#box-1');
+var $dial1 = $('#dial-1');
+
 // Move monster 1
-var tlMove1 = new TimelineMax({
+var tlM1Left = new TimelineMax({
   paused: true,
   onComplete: function() {
-    console.log('tlMove1 complete');
+    console.log('tlM1Left complete');
     tlWheelA.pause();
-    tlMove2.play();
-    tlWheelB.play();
+
+    tlM2Down.restart();
+    tlM2Wobble.restart();
+    tlWheelB.restart();
+    tlB1Bounce.restart();
+    tlD1Move.restart();
   }
 });
-tlMove1.to($m1, 3, {
+tlM1Left.fromTo($m1, 3, {}, {
   x: -250,
   ease: Power0.easeNone
 });
 
-// Move monster 2
-var tlMove2 = new TimelineMax({
+var tlB1Bounce = new TimelineMax({
   paused: true,
   onComplete: function() {
-    console.log('tlMove2 complete');
-    tlWheelB.pause();
-    tlMove3.play();
-    tlWheelC.play();
+    console.log('tlB1Bounce complete');
   }
 });
-tlMove2.to($m2, 2, {
+tlB1Bounce.to($box1, 0.2, {
+  y: -5,
+  yoyo: true,
+  repeat: 5,
+  ease: Linear.easeNone
+});
+
+var tlD1Move = new TimelineMax({
+  paused: true,
+  onComplete: function() {
+    console.log('tlD1Move complete');
+  }
+});
+tlD1Move.fromTo($dial1, 0.2, {
+  transformOrigin: '0% 100%',
+  rotation: 0,
+}, {
+  transformOrigin: '0% 100%',
+  rotation: -60,
+  repeat: 5
+});
+
+/////////////////////////////////////////////////////////////////////////////
+// Move monster 2
+
+var tlM2Down = new TimelineMax({
+  paused: true,
+  onComplete: function() {
+    console.log('tlM2Down complete');
+    tlM2Wobble.pause();
+
+    tlM2Right.restart();
+  }
+});
+tlM2Down.fromTo($m2, 2, {
+  x: 0,
+  y: 0
+}, {
   y: 151,
   ease: Power0.easeNone
 });
-tlMove2.to($m2, 3, {
+
+var tlM2Right = new TimelineMax({
+  paused: true,
+  onComplete: function() {
+    console.log('tlM2Right complete');
+    tlWheelB.pause();
+
+    tlM3Down.restart();
+    tlM3Wobble.restart();
+    tlWheelC.restart();
+  }
+});
+tlM2Right.fromTo($m2, 3, {
+  x: 0
+}, {
   x: 250,
   ease: Power0.easeNone
 });
 
+var tlM2Wobble = new TimelineMax({
+  paused: true
+});
+tlM2Wobble.fromTo($m2, 0.1, {
+  rotation: 10,
+  transformOrigin: '50% 50%'
+}, {
+  rotation: -10,
+  transformOrigin: '50% 50%',
+  yoyo: true,
+  repeat: -1
+});
+
+/////////////////////////////////////////////////////////////////////////////
 // Move monster 3
-var tlMove3 = new TimelineMax({
+
+var tlM3Wobble = new TimelineMax({
+  paused: true
+});
+tlM3Wobble.fromTo($m3, 0.1, {
+  rotation: 10,
+  transformOrigin: '50% 50%'
+}, {
+  rotation: -10,
+  transformOrigin: '50% 50%',
+  yoyo: true,
+  repeat: -1
+});
+
+var tlM3Down = new TimelineMax({
   paused: true,
   onComplete: function() {
-    console.log('tlMove3 complete');
-    tlWheelC.pause();
-    tlMove4.play();
-    tlWheelD.play();
+    console.log('tlM3Down complete');
+    tlM3Wobble.pause();
+
+    tlM3Left.restart();
   }
 });
-tlMove3.to($m3, 2, {
+tlM3Down.fromTo($m3, 2, {
+  y: 0
+}, {
   y: 195,
   ease: Power0.easeNone
 });
-tlMove3.to($m3, 3, {
+
+var tlM3Left = new TimelineMax({
+  paused: true,
+  onComplete: function() {
+    console.log('tlM3Left complete');
+    tlWheelC.pause();
+
+    tlWheelD.restart();
+    tlM4Down.restart();
+    tlM4Wobble.restart();
+  }
+});
+tlM3Left.to($m3, 3, {
   x: -250,
   ease: Power0.easeNone
 });
 
+/////////////////////////////////////////////////////////////////////////////
 // Move monster 4
-var tlMove4 = new TimelineMax({
+
+var tlM4Wobble = new TimelineMax({
+  paused: true
+});
+tlM4Wobble.fromTo($m4, 0.1, {
+  rotation: 10,
+  transformOrigin: '50% 50%'
+}, {
+  rotation: -10,
+  transformOrigin: '50% 50%',
+  yoyo: true,
+  repeat: -1
+});
+
+var tlM4Down = new TimelineMax({
   paused: true,
   onComplete: function() {
-    console.log('tlMove4 complete');
-    tlWheelD.pause();
-    tlMoveHat.play();
+    console.log('tlM4Down complete');
+    tlM4Wobble.pause();
 
+    tlM4Right.restart();
   }
 });
-tlMove4.to($m4, 2, {
+tlM4Down.fromTo($m4, 2, {}, {
   y: 146,
   ease: Power0.easeNone
 });
-tlMove4.to($m4, 3, {
+
+var tlM4Right = new TimelineMax({
+  paused: true,
+  onComplete: function() {
+    console.log('tlM4Right complete');
+    tlWheelD.pause();
+
+    tlMoveHat.restart();
+  }
+});
+tlM4Right.to($m4, 3, {
   x: 250,
   ease: Power0.easeNone
 });
@@ -94,7 +215,8 @@ var tlMoveHat = new TimelineMax({
   paused: true,
   onComplete: function() {
     console.log('tlMoveHat complete');
-    tlBfly.play();
+
+    tlBfly.restart();
   }
 });
 tlMoveHat.to($mhat, 0.5, {
@@ -105,7 +227,9 @@ tlMoveHat.to($mhat, 0.5, {
 });
 
 // Move first pair of wheels
-var tlWheelA = new TimelineMax({ paused: true });
+var tlWheelA = new TimelineMax({
+  paused: true
+});
 tlWheelA.to([wheel1, wheel2], 1, {
   rotation: -360,
   transformOrigin: '50% 50%',
@@ -114,7 +238,9 @@ tlWheelA.to([wheel1, wheel2], 1, {
 });
 
 // Move second pair of wheels
-var tlWheelB = new TimelineMax({ paused: true });
+var tlWheelB = new TimelineMax({
+  paused: true
+});
 tlWheelB.to([wheel3, wheel4], 1, {
   rotation: 360,
   transformOrigin: '50% 50%',
@@ -123,7 +249,9 @@ tlWheelB.to([wheel3, wheel4], 1, {
 });
 
 // Move third pair of wheels
-var tlWheelC = new TimelineMax({ paused: true });
+var tlWheelC = new TimelineMax({
+  paused: true
+});
 tlWheelC.to([wheel5, wheel6], 1, {
   rotation: -360,
   transformOrigin: '50% 50%',
@@ -132,7 +260,9 @@ tlWheelC.to([wheel5, wheel6], 1, {
 });
 
 // Move fourth pair of wheels
-var tlWheelD = new TimelineMax({ paused: true });
+var tlWheelD = new TimelineMax({
+  paused: true
+});
 tlWheelD.to([wheel7, wheel8], 1, {
   rotation: 360,
   transformOrigin: '50% 50%',
@@ -156,6 +286,6 @@ tlBfly.to($bfly, 1, {
 
 // Let's go!
 $('.btn-zolt').on('click', function() {
-  tlMove1.play(0);
-  tlWheelA.play(0);
+  tlM1Left.restart();
+  tlWheelA.restart();
 });
