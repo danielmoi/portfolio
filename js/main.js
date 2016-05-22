@@ -18,7 +18,22 @@ $('.nav__toggle').on('vclick', function(e) {
   $('.nav').toggle();
 });
 
+var $btnZolt = $('.btn-zolt');
 
+var tlBtnZolt = new TimelineMax({
+  // repeatDelay: 5
+});
+tlBtnZolt.to($btnZolt, 0.2, {
+  // css: { backgroundColor: 'white' },
+  // css: { opacity: 0.3, 'border-radius': '1rem' },
+  css: { 'border-radius': '1rem', width: '1.1' },
+  text: '?',
+  repeat: -1,
+  yoyo: true,
+  // delay: 2,
+  ease: Linear.easeNone,
+  repeatDelay: 2
+});
 
 ////////////////////////////////////////////////////////////////////////////
 

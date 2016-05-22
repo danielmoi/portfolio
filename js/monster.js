@@ -359,7 +359,7 @@ tlBfly.to($bfly, 1, {
 });
 
 // Let's go!
-$('.btn-zolt').on('click', function() {
+$('.btn-zolt').on('vclick', function() {
   $(this).prop('disabled', true);
   tlM1Left.pause(0);
   tlM4Right.pause(0);
@@ -368,4 +368,5 @@ $('.btn-zolt').on('click', function() {
   tlM4Down.pause(0);
   tlM1Left.restart();
   tlWheelA.restart();
+  tlBtnZolt.pause(0);
 });
