@@ -368,5 +368,5 @@ $('.btn-zolt').on('vclick', function() {
   tlM4Down.pause(0);
   tlM1Left.restart();
   tlWheelA.restart();
-  tlMagic.pause(0);
+  tlBtnZoltParent.pause(0);
 });
