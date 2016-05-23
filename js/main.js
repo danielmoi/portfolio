@@ -2,9 +2,13 @@
 
 // Typed
 
+$(document).ready(function() {
+  $('.main__tagline-1').typed(typedOptions1);
+});
+
 var typedOptions1 = {
   strings: ['Full-stack web developer and graphic designer.'],
-  typeSpeed: 30,
+  typeSpeed: 20,
   startDelay: 1000,
   showCursor: false,
   callback: function() {
@@ -12,13 +16,16 @@ var typedOptions1 = {
     console.log('hi');
   }
 };
-$('.main__tagline-1').typed(typedOptions1);
 
 var typedOptions2 = {
   strings: ['Passionate about code, design, climbing, and the oxford comma.'],
-  typeSpeed: 30,
+  typeSpeed: 20,
   startDelay: 1000,
-  showCursor: false
+  showCursor: false,
+  callback: function() {
+    $('.btn-zolt').prop('disabled', false);
+    tlMove0.restart();
+  }
 };
 var displayTagline2 = function() {
   $('.main__tagline-2').typed(typedOptions2);
@@ -76,6 +83,7 @@ tlBtnZolt.to($btnZolt, 0.1, {y:"-30"});
 tlBtnZolt.to($btnZolt, 0.1, {y:"0"});
 
 var tlMagic = new TimelineMax({
+  paused: true,
   repeat: -1,
   repeatDelay: 5
 });
@@ -102,12 +110,15 @@ tlBflyRotate.to($butterfly, 0.2, {
   repeat: -1
 });
 
-var tlMove0 = new TimelineLite();
+var tlMove0 = new TimelineLite({
+  paused: true
+});
 tlMove0.to($butterfly, 5, {
   left: '50%',
   top: '-1px',
   onComplete: function() {
     tlBflyRotate.pause();
+    tlMagic.restart();
     console.log('tlMove0 complete');
   }
 }, 2);
