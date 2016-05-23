@@ -1,5 +1,32 @@
 /////////////////////////////////////////////////////////////////////////////
 
+// Typed
+
+var typedOptions1 = {
+  strings: ['Full-stack web developer and graphic designer.'],
+  typeSpeed: 30,
+  startDelay: 1000,
+  showCursor: false,
+  callback: function() {
+    displayTagline2();
+    console.log('hi');
+  }
+};
+$('.main__tagline-1').typed(typedOptions1);
+
+var typedOptions2 = {
+  strings: ['Passionate about code, design, climbing, and the oxford comma.'],
+  typeSpeed: 30,
+  startDelay: 1000,
+  showCursor: false
+};
+var displayTagline2 = function() {
+  $('.main__tagline-2').typed(typedOptions2);
+};
+
+
+/////////////////////////////////////////////////////////////////////////////
+
 // NAV BAR
 
 var navOpen = false;
@@ -40,7 +67,7 @@ $('.nav__toggle').on('vclick', function(e) {
 var $btnZolt = $('.btn-zolt');
 
 var tlBtnZolt = new TimelineMax({
-  repeat: 3,
+  repeat: 2,
   repeatDelay: 0.5
 });
 
