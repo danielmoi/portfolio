@@ -421,7 +421,8 @@ input[type=submit] {
   margin: auto;
   padding-bottom: 0.5rem; }
 
-.modal__link {
+.modal__link,
+.modal__repo {
   color: #00a5cd; }
 
 .modal__tools {
