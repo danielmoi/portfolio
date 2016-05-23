@@ -82,12 +82,12 @@ var tlBtnZolt = new TimelineMax({
 tlBtnZolt.to($btnZolt, 0.1, {y:"-30"});
 tlBtnZolt.to($btnZolt, 0.1, {y:"0"});
 
-var tlMagic = new TimelineMax({
+var tlBtnZoltParent = new TimelineMax({
   paused: true,
   repeat: -1,
   repeatDelay: 5
 });
-tlMagic.add(tlBtnZolt);
+tlBtnZoltParent.add(tlBtnZolt);
 
 
 ////////////////////////////////////////////////////////////////////////////
@@ -118,7 +118,7 @@ tlMove0.to($butterfly, 5, {
   top: '-1px',
   onComplete: function() {
     tlBflyRotate.pause();
-    tlMagic.restart();
+    tlBtnZoltParent.restart();
     console.log('tlMove0 complete');
   }
-}, 2);
+}, 1);
