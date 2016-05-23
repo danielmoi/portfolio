@@ -113,11 +113,11 @@ var populateModalProject = function(index) {
 
   $modalLink.attr('href', objCurrentProject.url);
   $modalLink.attr('target', '_blank');
-  $modalLink.text('Project');
+  $modalLink.text('– Project – ');
 
   $modalRepo.attr('href', objCurrentProject.repo);
   $modalRepo.attr('target', '_blank');
-  $modalRepo.text('Code');
+  $modalRepo.text('Code –');
 
 };
 
