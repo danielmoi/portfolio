@@ -11,41 +11,48 @@ var arrProjects = [{
   img: 'img/musical-monsters.png',
   desc: 'A fun and interactive app that allows you to experiment with music. See monsters dance to your choice of music, play the drums and piano, and more!',
   url: 'https://musical-monsters.herokuapp.com',
+  repo: 'https://github.com/danielmoi/musical-monsters',
   tech: 'Rails, D3.js, Three.js, Greensock, Web Audio API'
 }, {
   name: 'Sorter',
   img: 'img/sorter.jpg',
   desc: 'An organisational app for sorting and storing your web bookmarks, with custom categories, favourites, and a reading list.',
   url: 'https://sorter-4000.herokuapp.com/',
+  repo: 'https://github.com/danielmoi/sorter_app',
   tech: 'Rails, Cloudinary, ChartJS'
 },{
   name: 'BuddyUP',
   img: 'img/buddy-up.jpg',
   desc: 'A motivational app to support people achieving goals. Find a new friend to BuddyUP with and achieve your goals together.',
   url: 'https://buddy-up.herokuapp.com/',
+  repo: 'https://github.com/danielmoi/buddyup',
   tech: 'Rails, Backbone, Stripe, Underscore, Cloudinary'
 },{
   name: 'Catbus 3000',
   img: 'img/catbus.jpg',
   desc: 'A 2D game, reimagining the classic Pong / Breakout game. Inspired by the amazing Catbus from My Neighbor Totoro!',
   url: 'http://danielmoi.github.io/ga-01-breakout/src',
+  repo: 'https://github.com/danielmoi/ga-01-breakout',
   tech: 'jQuery, Canvas, Firebase'
 },{
   name: 'Tic Tac Toe',
   img: 'img/tic-tac-toe.jpg',
   desc: 'The classic noughts and crosses game. Play against a friend or challenge the computer (with 3 levels of AI).',
   url: 'http://danielmoi.github.io/ga-01-tic-tac-toe/src/',
+  repo: 'https://github.com/danielmoi/ga-01-tic-tac-toe',
   tech: 'jQuery'
 },{
   name: 'Cafe App',
   img: 'img/cafe-app.jpg',
   desc: 'An app to help you locate the nearest cafes for any location in the world! View each cafe\'s rating and image from FourSquare.',
-  url: 'http://danielmoi.github.io/ga-01-breakout/src',
+  url: 'http://danielmoi.github.io/P5/dist',
+  repo: 'https://github.com/danielmoi/P5',
   tech: 'Knockout, Google Maps, FourSquare API, jQuery'
 }, {
   name: 'Nadine Claire Events',
   img: 'img/nadine-claire-events.jpg',
   desc: 'Business website for Nadine Claire Events, a boutique event management company in Sydney, as part of a project encompassing brand identity, style guide, and logo design.',
+  repo: 'http://nadineclaireevents.com/',
   url: 'http://nadineclaireevents.com/',
   tech: 'Wordpress, HTML5, CSS3'
 }];
@@ -92,6 +99,7 @@ var $modalImg = $('.modal__image');
 var $modalTools = $('.modal__tools');
 var $modalLink = $('.modal__link');
 var $modalURL = $('.modal_url');
+var $modalRepo = $('.modal__repo');
 
 var $arrowRight = $('.arrow-right');
 var $arrowLeft = $('.arrow-left');
@@ -102,9 +110,14 @@ var populateModalProject = function(index) {
   $modalDesc.text(objCurrentProject.desc);
   $modalImg.attr('src', objCurrentProject.img);
   $modalTools.text('Tools: ' + objCurrentProject.tech);
+
   $modalLink.attr('href', objCurrentProject.url);
   $modalLink.attr('target', '_blank');
-  $modalLink.text('Check it out here');
+  $modalLink.text('Project');
+
+  $modalRepo.attr('href', objCurrentProject.repo);
+  $modalRepo.attr('target', '_blank');
+  $modalRepo.text('Code');
 
 };
 
