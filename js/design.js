@@ -98,6 +98,7 @@ var populateModalDesign = function(index) {
   $modalTools.text('');
   $modalLink.text('');
   $modalRepo.text('');
+  $modalEnDash.text('');
 };
 
 var designNext = function() {
