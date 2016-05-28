@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Daniel Moi</title>
   <meta name="description=" content="Code. Design. Write.">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="/css/style.css">
   <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
   <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
@@ -39,7 +39,7 @@
       <h1 class="header__title">
 
         <a href="/">
-          <img class="header__logo" src="img/danielmoi-name.svg" alt="Daniel Moi"/>
+          <img class="header__logo" src="/img/danielmoi-name.svg" alt="Daniel Moi"/>
 
         </a>
       </h1>
@@ -57,7 +57,7 @@
         </li>
 
         <li>
-          <a class="nav__list-item" data-section="about" href="#about">About Me</a>
+          <a class="nav__list-item" href="learn/css-units">CSS Units</a>
         </li>
 
         <li>
