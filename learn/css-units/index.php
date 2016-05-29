@@ -13,6 +13,22 @@
 
   <div class="container cu-controls__container">
     <div class="cu-controls__section">
+      <label for="cu-size-asterisk">*</label>
+      <select class="" name="cu-size-asterisk">
+        <option value="default">default</option>
+        <option value="initial">initial</option>
+        <option value="inherit">inherit</option>
+        <option value="12px">12px</option>
+        <option value="14px">14px</option>
+        <option value="1em">1em</option>
+        <option value="2em">2em</option>
+        <option value="1rem">1rem</option>
+        <option value="2rem">2rem</option>
+      </select>
+    </div>
+
+      <div class="cu-controls__section">
+
       <label for="" class="cu-controls__label"><span>*: </span></label>
 
       <input type="radio" name="font-asterisk" id="r-fa-1" value="default" checked>

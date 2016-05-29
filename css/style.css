@@ -159,6 +159,13 @@ input[type=submit] {
 .field_with_errors {
   display: inline; }
 
+select {
+  font-size: 1rem;
+  padding: 0.5rem;
+  border: 1px solid #323232;
+  cursor: pointer;
+  -webkit-appearance: none; }
+
 .container {
   max-width: 800px;
   margin: 0 auto;
