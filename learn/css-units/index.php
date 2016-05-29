@@ -1,9 +1,8 @@
-<?php include "../header-start.php"; ?>
+<?php include "../header-learn-start.php"; ?>
 <link rel="stylesheet" href="/learn/css-units/css/style.css">
-<?php include "../header-end.php"; ?>
+<?php include "../header-learn-end.php"; ?>
 
 <div class="main__container">
-  <div class="container">
     <h1>CSS Units</h1>
     <p>an <code>em</code> is equal to the size of the font that applies to the <b>parent</b> of the element </p>
     <p>However, <code>em</code> values compound. Nested elements will have their <code>em</code> values multiplied by their parent's <code>em</code> value.</p>
@@ -11,7 +10,6 @@
     <p><code>rem</code> values were invented in order to sidestep the compounding problem. <span class="cu-color--html"><code class="cu-color--html">rem</code> values are relative to the root <code class="cu-color--html">html</code> element</span>, not the parent element. In other words, it lets you specify a font size in a relative
       fashion without being affected by the size of the parent, thereby eliminating compounding.</p>
 
-  </div>
 
   <div class="container cu-controls__container">
     <div class="cu-controls__section">
@@ -279,5 +277,7 @@
   </div>
 
 </div>
+
+<script src="/learn/css-units/js/css-units.js"></script>
 
 <?php include "../footer.php"; ?>

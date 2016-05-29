@@ -20,7 +20,7 @@
     <div class="container">
       <ul class="nav__list">
         <li>
-          <a class="nav__list-item nav__active" data-section="home" href="#">Home</a>
+          <a class="nav__list-item nav__active" data-section="home" href="/learn">Learn</a>
         </li>
 
         <li>
@@ -28,20 +28,9 @@
         </li>
 
         <li>
-          <a class="nav__list-item" data-section="projects" href="#projects">Projects</a>
+          <a class="nav__list-item" data-section="projects" href="#projects">Radio and Select</a>
         </li>
 
-        <li>
-          <a class="nav__list-item" data-section="design" href="#design">Design</a>
-        </li>
-
-        <li>
-          <a class="nav__list-item" data-section="learn" href="/learn">Learn</a>
-        </li>
-
-        <li>
-          <a class="nav__list-item" data-section="contact" href="#contact">Say hello!</a>
-        </li>
 
       </ul>
     </div>
