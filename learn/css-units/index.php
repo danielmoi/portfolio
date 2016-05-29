@@ -1,6 +1,6 @@
-<?php include "../header-learn-start.php"; ?>
+<?php include '../header-learn-start.php'; ?>
 <link rel="stylesheet" href="/learn/css-units/css/style.css">
-<?php include "../header-learn-end.php"; ?>
+<?php include '../header-learn-end.php'; ?>
 
 <div class="main__container">
     <h1>CSS Units</h1>
@@ -25,6 +25,10 @@
         <option value="1rem">1rem</option>
         <option value="2rem">2rem</option>
       </select>
+    </div>
+
+    <div class="cu-controls__button-container">
+      <button id="cu-button" class="btn">Let's go!</button>
     </div>
 
       <div class="cu-controls__section">
@@ -269,9 +273,7 @@
 
 
 
-    <div class="cu-controls__button-container">
-      <button id="cu-button" class="btn">Let's go!</button>
-    </div>
+
 
 
   </div>
@@ -296,4 +298,4 @@
 
 <script src="/learn/css-units/js/css-units.js"></script>
 
-<?php include "../footer.php"; ?>
+<?php include '../footer.php'; ?>
