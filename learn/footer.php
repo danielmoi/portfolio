@@ -6,10 +6,7 @@
 
 
 
-<script src="js/main.js"></script>
-<script src="js/projects.js"></script>
-<script src="js/monster.js"></script>
-<script src="js/design.js"></script>
+
 <script>
   (function(i, s, o, g, r, a, m) {
     i['GoogleAnalyticsObject'] = r;
