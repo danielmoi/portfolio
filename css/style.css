@@ -561,7 +561,7 @@ select {
   margin: 20px auto; }
 
 .cu-controls__section {
-  margin: 10px auto;
+  margin: 0.5rem;
   display: inline-block;
   border: 1px solid #00a5cd;
   padding: 0.5rem; }

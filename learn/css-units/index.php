@@ -11,83 +11,117 @@
       fashion without being affected by the size of the parent, thereby eliminating compounding.</p>
 
 
-  <div class="cu-controls__container">
-    <div class="cu-controls__section">
-      <label for="cu-size-asterisk">*</label>
-      <select class="" name="cu-size-asterisk">
-        <option value="default">default</option>
-        <option value="initial">initial</option>
-        <option value="inherit">inherit</option>
-        <option value="12px">12px</option>
-        <option value="14px">14px</option>
-        <option value="1em">1em</option>
-        <option value="2em">2em</option>
-        <option value="1rem">1rem</option>
-        <option value="2rem">2rem</option>
-      </select>
+  <div>
+    <div class="cu-controls__container">
+      <div class="cu-controls__section">
+        <label for="cu-size-asterisk">*</label>
+        <select class="" name="cu-size-asterisk">
+          <option value="default">default</option>
+          <option value="initial">initial</option>
+          <option value="inherit">inherit</option>
+          <option value="12px">12px</option>
+          <option value="14px">14px</option>
+          <option value="1em">1em</option>
+          <option value="2em">2em</option>
+          <option value="1rem">1rem</option>
+          <option value="2rem">2rem</option>
+        </select>
+      </div>
+
+      <div class="cu-controls__section">
+        <label for="cu-size-html">html</label>
+        <select class="" name="cu-size-html">
+          <option value="default">default</option>
+          <option value="initial">initial</option>
+          <option value="inherit">inherit</option>
+          <option value="12px">12px</option>
+          <option value="14px">14px</option>
+          <option value="1em">1em</option>
+          <option value="2em">2em</option>
+          <option value="1rem">1rem</option>
+          <option value="2rem">2rem</option>
+        </select>
+      </div>
+
+      <div class="cu-controls__section">
+        <label for="cu-size-body">body</label>
+        <select class="" name="cu-size-body">
+          <option value="default">default</option>
+          <option value="initial">initial</option>
+          <option value="inherit">inherit</option>
+          <option value="12px">12px</option>
+          <option value="14px">14px</option>
+          <option value="1em">1em</option>
+          <option value="2em">2em</option>
+          <option value="1rem">1rem</option>
+          <option value="2rem">2rem</option>
+        </select>
+      </div>
+
+      <div class="cu-controls__section">
+        <label for="cu-size-div">div</label>
+        <select class="" name="cu-size-div">
+          <option value="default">default</option>
+          <option value="initial">initial</option>
+          <option value="inherit">inherit</option>
+          <option value="12px">12px</option>
+          <option value="14px">14px</option>
+          <option value="1em">1em</option>
+          <option value="2em">2em</option>
+          <option value="1rem">1rem</option>
+          <option value="2rem">2rem</option>
+        </select>
+      </div>
+  </div>
+
+    <div>
+      <div class="cu-controls__section">
+        <label for="cu-size-grandparent">grandparent</label>
+        <select class="" name="cu-size-grandparent">
+          <option value="default">default</option>
+          <option value="initial">initial</option>
+          <option value="inherit">inherit</option>
+          <option value="12px">12px</option>
+          <option value="14px">14px</option>
+          <option value="1em">1em</option>
+          <option value="2em">2em</option>
+          <option value="1rem">1rem</option>
+          <option value="2rem">2rem</option>
+        </select>
+      </div>
+
+      <div class="cu-controls__section">
+        <label for="cu-size-parent">parent</label>
+        <select class="" name="cu-size-parent">
+          <option value="default">default</option>
+          <option value="initial">initial</option>
+          <option value="inherit">inherit</option>
+          <option value="12px">12px</option>
+          <option value="14px">14px</option>
+          <option value="1em">1em</option>
+          <option value="2em">2em</option>
+          <option value="1rem">1rem</option>
+          <option value="2rem">2rem</option>
+        </select>
+      </div>
+
+      <div class="cu-controls__section">
+        <label for="cu-size-child">child</label>
+        <select class="" name="cu-size-child">
+          <option value="default">default</option>
+          <option value="initial">initial</option>
+          <option value="inherit">inherit</option>
+          <option value="12px">12px</option>
+          <option value="14px">14px</option>
+          <option value="1em">1em</option>
+          <option value="2em">2em</option>
+          <option value="1rem">1rem</option>
+          <option value="2rem">2rem</option>
+        </select>
+      </div>
     </div>
 
-    <div class="cu-controls__section">
-      <label for="cu-size-html">html</label>
-      <select class="" name="cu-size-html">
-        <option value="default">default</option>
-        <option value="initial">initial</option>
-        <option value="inherit">inherit</option>
-        <option value="12px">12px</option>
-        <option value="14px">14px</option>
-        <option value="1em">1em</option>
-        <option value="2em">2em</option>
-        <option value="1rem">1rem</option>
-        <option value="2rem">2rem</option>
-      </select>
-    </div>
-
-    <div class="cu-controls__section">
-      <label for="cu-size-body">body</label>
-      <select class="" name="cu-size-body">
-        <option value="default">default</option>
-        <option value="initial">initial</option>
-        <option value="inherit">inherit</option>
-        <option value="12px">12px</option>
-        <option value="14px">14px</option>
-        <option value="1em">1em</option>
-        <option value="2em">2em</option>
-        <option value="1rem">1rem</option>
-        <option value="2rem">2rem</option>
-      </select>
-    </div>
-
-    <div class="cu-controls__section">
-      <label for="cu-size-div">div</label>
-      <select class="" name="cu-size-div">
-        <option value="default">default</option>
-        <option value="initial">initial</option>
-        <option value="inherit">inherit</option>
-        <option value="12px">12px</option>
-        <option value="14px">14px</option>
-        <option value="1em">1em</option>
-        <option value="2em">2em</option>
-        <option value="1rem">1rem</option>
-        <option value="2rem">2rem</option>
-      </select>
-    </div>
-
-    <div class="cu-controls__section">
-      <label for="cu-size-grandparent">grandparent</label>
-      <select class="" name="cu-size-grandparent">
-        <option value="default">default</option>
-        <option value="initial">initial</option>
-        <option value="inherit">inherit</option>
-        <option value="12px">12px</option>
-        <option value="14px">14px</option>
-        <option value="1em">1em</option>
-        <option value="2em">2em</option>
-        <option value="1rem">1rem</option>
-        <option value="2rem">2rem</option>
-      </select>
-    </div>
-
-    <div class="cu-controls__button-container">
+    <div class="btn-container">
       <button id="cu-button" class="btn">Let's go!</button>
     </div>
 
