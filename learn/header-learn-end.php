@@ -24,11 +24,11 @@
         </li>
 
         <li>
-          <a class="nav__list-item" href="learn/css-units">CSS Units</a>
+          <a class="nav__list-item" href="/learn/css-units">CSS Units</a>
         </li>
 
         <li>
-          <a class="nav__list-item" data-section="projects" href="#projects">Radio and Select</a>
+          <a class="nav__list-item" data-section="projects" href="/learn/radio-and-select">Radio and Select</a>
         </li>
 
 
