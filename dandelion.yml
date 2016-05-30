@@ -1,8 +1,8 @@
-adapter: sftp
-host: example.com
-username: user
-password: pass
-path: path/to/deployment
+adapter: ftps
+host: danielmoi.com
+username: <%= ENV['DANDELION_USER'] %>
+password: <%= ENV['DANDELION_PASS'] %>
+path: /
 
 exclude:
     - .gitignore
