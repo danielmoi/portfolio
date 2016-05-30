@@ -26,6 +26,6 @@
   <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
   <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"> -->
-  <script src="../js/lib/jquery-1.12.3.min.js"></script>
-  <script src="../js/lib/jquery.mobile.custom.min.js"></script>
-  <script src="../js/lib/underscore.min.js"></script>
+  <script src="/js/lib/jquery-1.12.3.min.js"></script>
+  <script src="/js/lib/jquery.mobile.custom.min.js"></script>
+  <script src="/js/lib/underscore.min.js"></script>
