@@ -13,3 +13,4 @@ exclude:
     - gulpfile.js
     - manifest.json
     - package.json
+    - test
