@@ -85,7 +85,11 @@ p:last-child {
   margin-bottom: 1em; }
 
 code {
-  font-family: Courier, monospace; }
+  font-family: Courier, monospace;
+  border-radius: 0.25rem;
+  padding: 0.125rem 0.25rem;
+  background: rgba(0, 0, 0, 0.5);
+  color: white; }
 
 * {
   box-sizing: border-box; }
@@ -614,3 +618,15 @@ select {
 
 .cu-color--html {
   color: #00a5cd; }
+
+.rs__container {
+  padding: 1rem 0;
+  border-top: 1px solid #00a5cd; }
+
+.rs__container:last-of-type {
+  border-bottom: 1px solid #00a5cd;
+  margin-bottom: 4rem; }
+
+.rs__radio {
+  display: inline-block;
+  width: initial; }

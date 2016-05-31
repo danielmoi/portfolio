@@ -20,4 +20,8 @@ p:last-child {
 
 code {
   font-family: Courier, monospace;
+  border-radius: 0.25rem;
+  padding: 0.125rem 0.25rem;
+  background: $black-light;
+  color: white;
 }

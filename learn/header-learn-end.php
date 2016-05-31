@@ -28,7 +28,7 @@
         </li>
 
         <li>
-          <a class="nav__list-item" data-section="projects" href="/learn/radio-and-select">Radio and Select</a>
+          <a class="nav__list-item" data-section="projects" href="/learn/radio">Radio</a>
         </li>
 
 

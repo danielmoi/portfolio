@@ -2,7 +2,9 @@
 
 $blue: #0071ae; // my blue
 $gray: rgb(50,50,50);
-$primary: #00a5cd;
+$black-light: rgba(0,0,0,0.5);
+$primary: #00a5cd; // rgb(0,165,205)
+$primary-light: rgba(0,165,205, 0.8);
 $links: $primary;
 
 $breakpoint: 800px;

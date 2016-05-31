@@ -1,0 +1,12 @@
+.rs__container {
+  padding: 1rem 0;
+  border-top: 1px solid $primary;
+}
+.rs__container:last-of-type {
+  border-bottom: 1px solid $primary;
+  margin-bottom: 4rem;
+}
+.rs__radio {
+  display: inline-block;
+  width: initial;
+}
