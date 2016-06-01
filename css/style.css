@@ -630,3 +630,9 @@ select {
 .rs__radio {
   display: inline-block;
   width: initial; }
+
+.rs__output {
+  border-bottom: 1px solid #00a5cd;
+  display: inline-block;
+  padding: 0.25rem 0;
+  margin-bottom: 1rem; }

@@ -10,3 +10,9 @@
   display: inline-block;
   width: initial;
 }
+.rs__output {
+  border-bottom: 1px solid $primary;
+  display: inline-block;
+  padding: 0.25rem 0;
+  margin-bottom: 1rem;
+}
