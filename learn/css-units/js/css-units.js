@@ -1,3 +1,5 @@
+$('[data-section="css-units"]').addClass('nav__active');
+
 var CU = {};
 CU.$asterisk = $('*');
 CU.$html = $('html');
