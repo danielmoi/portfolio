@@ -25,3 +25,9 @@ code {
   background: $black-light;
   color: white;
 }
+
+pre[class*="language-"],
+code[class*="language-"],
+.token {
+  font-family: Courier, monospace;
+}

@@ -91,6 +91,11 @@ code {
   background: rgba(0, 0, 0, 0.5);
   color: white; }
 
+pre[class*="language-"],
+code[class*="language-"],
+.token {
+  font-family: Courier, monospace; }
+
 * {
   box-sizing: border-box; }
 
