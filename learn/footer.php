@@ -1,3 +1,4 @@
+<div class="footer__spacer"></div>
 <footer class="footer">
   <div class="footer__container">
     Made with &#9829; by Daniel Moi &copy; 2016

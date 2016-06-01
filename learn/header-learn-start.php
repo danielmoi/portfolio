@@ -8,6 +8,7 @@
   <title>Daniel Moi</title>
   <meta name="description=" content="Code. Design. Write.">
   <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/lib/prism.css">
   <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
   <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
@@ -29,3 +30,4 @@
   <script src="/js/lib/jquery-1.12.3.min.js"></script>
   <script src="/js/lib/jquery.mobile.custom.min.js"></script>
   <script src="/js/lib/underscore.min.js"></script>
+  <script src="/js/lib/prism.js"></script>
