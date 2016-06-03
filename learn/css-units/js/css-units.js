@@ -1,4 +1,4 @@
-$('[data-section="css-units"]').addClass('nav__active');
+// $('[data-section="css-units"]').addClass('nav__active');
 
 var CU = {};
 CU.$asterisk = $('*');
