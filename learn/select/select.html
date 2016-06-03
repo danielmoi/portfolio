@@ -3,17 +3,134 @@
 
   <div class="rs__container">
     <h2>Step 1</h2>
-    <p>The most basic radio.</p>
+    <p>The most basic select.</p>
     <p>We use the <code>&lt;select&gt;</code> element.</p>
     <pre><code class="language-markup"><select></select></code></pre>
 
     <h3 class="rs__output">Output</h3>
-
     <div>
       <select></select>
     </div>
 
   </div>
-</div>
 
-<script src="js/select.js"></script>
+  <div class="rs__container">
+    <h2>Step 2</h2>
+    <p>Let's add our first option.</p>
+    <p>We do this with the <code>&lt;option&gt;</code> element.</p>
+    <p>We can select this option… but it's blank, and not very useful.</p>
+    <pre><code class="language-markup"><select>
+  <option></option>
+</select></code></pre>
+
+    <h3 class="rs__output">Output</h3>
+    <div>
+      <select>
+        <option value=""></option>
+      </select>
+    </div>
+
+  </div>
+
+  <div class="rs__container">
+    <h2>Step 3</h2>
+    <p>Let's attach a value to our option.</p>
+    <p>We do this with the <code>value</code> attribute.</p>
+    <pre><code class="language-markup"><select>
+  <option value="hotdogs"></option>
+</select></code></pre>
+
+    <h3 class="rs__output">Output</h3>
+    <div>
+      <select>
+        <option value="hotdogs"></option>
+      </select>
+    </div>
+
+  </div>
+
+  <div class="rs__container">
+    <h2>Step 4</h2>
+    <p>Let's make the value of our option actually visible.</p>
+    <p>We do this with text inside the <code>option</code> tags.</p>
+    <pre><code class="language-markup"><select>
+  <option value="hotdogs">Hotdogs</option>
+</select></code></pre>
+
+    <h3 class="rs__output">Output</h3>
+    <div>
+      <select>
+        <option value="hotdogs">Hotdogs</option>
+      </select>
+    </div>
+
+  </div>
+
+  <div class="rs__container">
+    <h2>Step 5</h2>
+    <p>Let's add 2 more options to our select element.</p>
+    <pre><code class="language-markup"><select>
+  <option value="hotdogs">Hotdogs</option>
+  <option value="butterfly">Butterfly</option>
+  <option value="monster">Monster</option>
+</select></code></pre>
+
+    <h3 class="rs__output">Output</h3>
+    <div>
+      <select>
+        <option value="hotdogs">Hotdogs</option>
+        <option value="butterfly">Butterfly</option>
+        <option value="monster">Monster</option>
+      </select>
+    </div>
+
+  </div>
+
+  <div class="rs__container">
+    <h2>Step 6</h2>
+    <p>We can choose which option is 'pre-selected' with the <code>selected</code> attribute.</p>
+    <pre><code class="language-markup"><select>
+  <option value="hotdogs">Hotdogs</option>
+  <option value="butterfly" selected>Butterfly</option>
+  <option value="monster">Monster</option>
+</select></code></pre>
+
+    <h3 class="rs__output">Output</h3>
+    <div>
+      <select>
+        <option value="hotdogs">Hotdogs</option>
+        <option value="butterfly" selected>Butterfly</option>
+        <option value="monster">Monster</option>
+      </select>
+    </div>
+
+  </div>
+
+  <div class="rs__container">
+    <h2>Step 7</h2>
+    <p>Let's associate our options with our select element.</p>
+    <p>We do this with the <code>name</code> attribute</p>
+    <p>We'll need this when we retrieve the selected option.</p>
+    <pre><code class="language-markup"><select name="select1">
+  <option value="hotdogs">Hotdogs</option>
+  <option value="butterfly" selected>Butterfly</option>
+  <option value="monster">Monster</option>
+</select></code></pre>
+
+    <h3 class="rs__output">Output</h3>
+    <div>
+      <select name="select1">
+        <option value="hotdogs">Hotdogs</option>
+        <option value="butterfly" selected>Butterfly</option>
+        <option value="monster">Monster</option>
+      </select>
+    </div>
+
+  </div>
+
+
+
+
+</div><!-- end main__container -->
+
+<script src="/learn/select/js/select.js"></script>
