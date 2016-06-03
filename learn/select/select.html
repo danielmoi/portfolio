@@ -128,9 +128,44 @@
 
   </div>
 
+  <div class="rs__container">
+    <h2>Step 8</h2>
+
+    <p>Now let's retrieve the value of the selected option!</p>
+    <p>We do this by targeting the name attribute of our <code>select</code> element.</p>
+    <p>This will retrieve the (one) chosen value from our group of options.</p>
+    <pre><code class="language-js">$('.btn--select2').on('click', function() {
+  $('.select2-value').text($('select[name="select2"]').val());
+});
+</code></pre>
+
+
+    <h3 class="rs__output">Output</h3>
+    <div>
+      <select name="select2">
+        <option value="hotdogs">Hotdogs</option>
+        <option value="butterfly" selected>Butterfly</option>
+        <option value="monster">Monster</option>
+      </select>
+    </div>
+
+    <p>Value of chosen <code>select2</code> option: <span class="select2-value"></span></p>
+
+    <div class="btn-container">
+      <button class="btn btn--select2">Retrieve!</button>
+    </div>
+
+
+    <p>NB. We could give our <code>select</code> element an <code>id</code> and target that in our retrieval, but it's more <em>semantic</em> to target the <code>name</code> attribute.</p>
+    <p>NB. We could use the <code>:selected</code> selector (the below code would produce the same result), but it's not necessary.</p>
+
+    <pre><code class="language-js">$('select[name=select2] option:selected').val()</code></pre>
+  </div>
 
 
 
-</div><!-- end main__container -->
+
+</div>
+<!-- end main__container -->
 
 <script src="/learn/select/js/select.js"></script>
