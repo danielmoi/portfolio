@@ -1,4 +1,6 @@
-<script>$('[data-section="checkbox"]').addClass('nav__active');</script>
+<script>
+  $('[data-section="checkbox"]').addClass('nav__active');
+</script>
 
 <div class="main__container">
   <h1>Checkbox Tutorial</h1>
@@ -16,6 +18,143 @@
     </div>
 
   </div>
+
+
+  <div class="rs__container">
+    <h2>Step 2</h2>
+    <p>Now let's attach a <strong>value</strong> to our checkbox.</p>
+    <p>We do this with the <code>value</code> <em>attribute</em>.</p>
+    <pre><code class="language-markup"><input type="checkbox" value="hotdogs"></code></pre>
+
+    <h3 class="rs__output">Output</h3>
+
+    <div>
+      <input type="checkbox" value="hotdogs" class="rsc__checkbox">
+    </div>
+
+  </div>
+
+
+  <div class="rs__container">
+    <h2>Step 3</h2>
+    <p>Now let's make that value visible.</p>
+    <p>We do this with the <code>&lt;label&gt;</code> element.</p>
+    <pre><code class="language-markup"><input type="checkbox" value="hotdogs">
+<label>Hotdogs</label></code></pre>
+
+    <h3 class="rs__output">Output</h3>
+
+    <div>
+      <input type="checkbox" value="hotdogs" class="rsc__checkbox">
+      <label>Hotdogs</label>
+    </div>
+
+  </div>
+
+  <div class="rs__container">
+    <h2>Step 4</h2>
+    <p>Now let's associate our label with our checkbox.</p>
+    <p>This way, clicking the label will check our checkbox.</p>
+    <p>We do this by adding a <code>for</code> attribute to our label...</p>
+    <p>That corresponds to the <code>id</code> attribute of our checkbox.</p>
+    <pre><code class="language-markup"><input type="checkbox" value="hotdogs" id="cb1-hotdogs">
+<label for="cb1-hotdogs">Hotdogs</label></code></pre>
+
+    <h3 class="rs__output">Output</h3>
+
+    <div>
+      <input type="checkbox" value="hotdogs" class="rsc__checkbox" id="cb1-hotdogs">
+      <label for="cb1-hotdogs">Hotdogs</label>
+    </div>
+
+  </div>
+
+
+  <div class="rs__container">
+    <h2>Step 5</h2>
+    <p>Let's add more checkboxes!</p>
+    <p>We can chose which checkbox is 'pre-chosen' with the <code>checked</code> attribute.</p>
+    <pre><code class="language-markup"><input type="checkbox" value="hotdogs" id="cb2-hotdogs">
+<label for="cb2-hotdogs">Hotdogs</label>
+<input type="checkbox" value="butterfly" id="cb2-butterfly" checked>
+<label for="cb2-butterfly">Butterfly</label>
+<input type="checkbox" value="monster" id="cb2-monster">
+<label for="cb2-monster">Monster</label></code></pre>
+
+    <h3 class="rs__output">Output</h3>
+
+    <div>
+      <input type="checkbox" value="hotdogs" class="rsc__checkbox" id="cb2-hotdogs">
+      <label for="cb2-hotdogs" class="rsc__label">Hotdogs</label>
+      <input type="checkbox" value="butterfly" class="rsc__checkbox" id="cb2-butterfly" checked>
+      <label for="cb2-butterfly" class="rsc__label">Butterfly</label>
+      <input type="checkbox" value="monster" class="rsc__checkbox" id="cb2-monster">
+      <label for="cb2-monster" class="rsc__label">Monster</label>
+    </div>
+
+  </div>
+
+  <div class="rs__container">
+    <h2>Step 6</h2>
+    <p>Now let's group our checkboxes together.</p>
+    <p>We do this with the <code>name</code> attribute.</p>
+    <p>We'll need this when we retrieve the chosen checkbox.</p>
+    <pre><code class="language-markup"><input type="checkbox" value="hotdogs" id="cb3-hotdogs" name="cb3">
+<label for="cb3-hotdogs">Hotdogs</label>
+<input type="checkbox" value="butterfly" id="cb3-butterfly" name="cb3" checked>
+<label for="cb3-butterfly">Butterfly</label>
+<input type="checkbox" value="monster" id="cb3-monster" name="cb3">
+<label for="cb3-monster">Monster</label></code></pre>
+
+    <h3 class="rs__output">Output</h3>
+
+    <div>
+      <input type="checkbox" value="hotdogs" class="rsc__checkbox" id="cb3-hotdogs" name="cb3">
+      <label for="cb3-hotdogs" class="rsc__label">Hotdogs</label>
+      <input type="checkbox" value="butterfly" class="rsc__checkbox" id="cb3-butterfly" name="cb3" checked>
+      <label for="cb3-butterfly" class="rsc__label">Butterfly</label>
+      <input type="checkbox" value="monster" class="rsc__checkbox" id="cb3-monster" name="cb3">
+      <label for="cb3-monster" class="rsc__label">Monster</label>
+    </div>
+
+  </div>
+
+  <div class="rs__container">
+    <h2>Step 7</h2>
+    <p>Now let's retrieve the value of the chosen checkbox!</p>
+    <p>We do this by targeting the name attribute of our checkbox, and applying the <code>:checked</code> jQuery selector.</p>
+
+    <pre><code class="language-js">$('.btn--cb4').on('click', function() {
+  var arrCB = [];
+  $('input[name="cb4"]:checked').each(function(index, el) {
+    arrCB.push(el.value);
+  });
+  $('.cb4-value').text(arrCB.join(', '));
+});</code></pre>
+
+    <h3 class="rs__output">Output</h3>
+
+    <div>
+      <input type="checkbox" value="hotdogs" class="rsc__checkbox" id="cb4-hotdogs" name="cb4">
+      <label for="cb4-hotdogs" class="rsc__label">Hotdogs</label>
+      <input type="checkbox" value="butterfly" class="rsc__checkbox" id="cb4-butterfly" name="cb4" checked>
+      <label for="cb4-butterfly" class="rsc__label">Butterfly</label>
+      <input type="checkbox" value="monster" class="rsc__checkbox" id="cb4-monster" name="cb4">
+      <label for="cb4-monster" class="rsc__label">Monster</label>
+    </div>
+
+    <p>Value(s) from cb4 group: <span class="cb4-value"></span></p>
+
+    <div class="btn-container">
+      <button class="btn btn--cb4">Retrieve!</button>
+    </div>
+
+
+  </div>
+
+
+
+
 
 
 </div>
