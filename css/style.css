@@ -658,3 +658,6 @@ input[type=radio] {
 
 .rsc__label {
   margin-right: 0.5rem; }
+
+.primary {
+  color: #00a5cd; }
