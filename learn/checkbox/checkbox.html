@@ -123,6 +123,7 @@
     <h2>Step 7</h2>
     <p>Now let's retrieve the value of the chosen checkbox!</p>
     <p>We do this by targeting the name attribute of our checkbox, and applying the <code>:checked</code> jQuery selector.</p>
+    <p>Note that when more than one checkbox is checked, we receive an <em>array</em> from our retrieval, and we iterate through that array.</p>
 
     <pre><code class="language-js">$('.btn--cb4').on('click', function() {
   var arrCB = [];
