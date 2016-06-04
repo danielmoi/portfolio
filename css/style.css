@@ -645,3 +645,7 @@ input[type=submit] {
   display: inline-block;
   padding: 0.25rem 0;
   margin-bottom: 1rem; }
+
+.rsc__checkbox {
+  display: inline-block;
+  width: initial; }
